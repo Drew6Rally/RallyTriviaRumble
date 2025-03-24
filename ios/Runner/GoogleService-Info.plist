@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1002867618099-58489fnh7o9b5op88t6bt8q7etcqvhho.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1002867618099-58489fnh7o9b5op88t6bt8q7etcqvhho</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1002867618099-18ea88uenk0rifkivdtkva6vh2vt93s2.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA-8ok8doMO7BcihOA1qMLYRFTH33lSDpQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1002867618099</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.flutterflow.rallytriviarumble</string>
+	<key>PROJECT_ID</key>
+	<string>rallytriviarumble-c0ec3</string>
+	<key>STORAGE_BUCKET</key>
+	<string>rallytriviarumble-c0ec3.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1002867618099:ios:ef1d4d22d4812946a68e46</string>
+</dict>
+</plist>

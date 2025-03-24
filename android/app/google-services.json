@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "1002867618099",
+    "project_id": "rallytriviarumble-c0ec3",
+    "storage_bucket": "rallytriviarumble-c0ec3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002867618099:android:6f59bc60d08f74aba68e46",
+        "android_client_info": {
+          "package_name": "com.flutterflow.rallytriviarumble"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1002867618099-18ea88uenk0rifkivdtkva6vh2vt93s2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flutterflow.rallytriviarumble",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "1002867618099-k8a4m2umvm2r4adjgqspre08teasf5i7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWFoEImxWjjDioUIArUBX6KhJI5Fwpjxs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1002867618099-k8a4m2umvm2r4adjgqspre08teasf5i7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1002867618099-58489fnh7o9b5op88t6bt8q7etcqvhho.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flutterflow.rallytriviarumble"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
