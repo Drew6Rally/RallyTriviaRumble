@@ -1,22 +1,14 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import '/backend/backend.dart';
 import '/backend/schema/structs/index.dart';
-import '/backend/schema/enums/enums.dart';
-import '/backend/supabase/supabase.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
 import '/main.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
 
 import '/index.dart';
 
@@ -86,23 +78,23 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? NavBarPage() : LoginPageWidget(),
+          appStateNotifier.loggedIn ? const NavBarPage() : const LoginPageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? NavBarPage() : LoginPageWidget(),
+              appStateNotifier.loggedIn ? const NavBarPage() : const LoginPageWidget(),
         ),
         FFRoute(
           name: LoginPageWidget.routeName,
           path: LoginPageWidget.routePath,
-          builder: (context, params) => LoginPageWidget(),
+          builder: (context, params) => const LoginPageWidget(),
         ),
         FFRoute(
           name: RegisterAccountWidget.routeName,
           path: RegisterAccountWidget.routePath,
-          builder: (context, params) => RegisterAccountWidget(),
+          builder: (context, params) => const RegisterAccountWidget(),
         ),
         FFRoute(
           name: CompleteProfileWidget.routeName,
@@ -119,14 +111,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: ForgotPasswordWidget.routeName,
           path: ForgotPasswordWidget.routePath,
-          builder: (context, params) => ForgotPasswordWidget(),
+          builder: (context, params) => const ForgotPasswordWidget(),
         ),
         FFRoute(
           name: HomeWidget.routeName,
           path: HomeWidget.routePath,
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'Home')
-              : NavBarPage(
+              ? const NavBarPage(initialPage: 'Home')
+              : const NavBarPage(
                   initialPage: 'Home',
                   page: HomeWidget(),
                 ),
@@ -134,14 +126,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: PreviousQuestionsWidget.routeName,
           path: PreviousQuestionsWidget.routePath,
-          builder: (context, params) => PreviousQuestionsWidget(),
+          builder: (context, params) => const PreviousQuestionsWidget(),
         ),
         FFRoute(
           name: MYProfilePageWidget.routeName,
           path: MYProfilePageWidget.routePath,
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'MY_profilePage')
-              : NavBarPage(
+              ? const NavBarPage(initialPage: 'MY_profilePage')
+              : const NavBarPage(
                   initialPage: 'MY_profilePage',
                   page: MYProfilePageWidget(),
                 ),
@@ -149,37 +141,37 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: SubmitAnswerFormWidget.routeName,
           path: SubmitAnswerFormWidget.routePath,
-          builder: (context, params) => SubmitAnswerFormWidget(),
+          builder: (context, params) => const SubmitAnswerFormWidget(),
         ),
         FFRoute(
           name: EditProfileWidget.routeName,
           path: EditProfileWidget.routePath,
-          builder: (context, params) => EditProfileWidget(),
+          builder: (context, params) => const EditProfileWidget(),
         ),
         FFRoute(
           name: ChangePasswordWidget.routeName,
           path: ChangePasswordWidget.routePath,
-          builder: (context, params) => ChangePasswordWidget(),
+          builder: (context, params) => const ChangePasswordWidget(),
         ),
         FFRoute(
           name: NotificationsSettingsWidget.routeName,
           path: NotificationsSettingsWidget.routePath,
-          builder: (context, params) => NotificationsSettingsWidget(),
+          builder: (context, params) => const NotificationsSettingsWidget(),
         ),
         FFRoute(
           name: PrivacyPolicyWidget.routeName,
           path: PrivacyPolicyWidget.routePath,
-          builder: (context, params) => PrivacyPolicyWidget(),
+          builder: (context, params) => const PrivacyPolicyWidget(),
         ),
         FFRoute(
           name: ProfilepageWidget.routeName,
           path: ProfilepageWidget.routePath,
-          builder: (context, params) => ProfilepageWidget(),
+          builder: (context, params) => const ProfilepageWidget(),
         ),
         FFRoute(
           name: SubmitQuestionFormWidget.routeName,
           path: SubmitQuestionFormWidget.routePath,
-          builder: (context, params) => SubmitQuestionFormWidget(),
+          builder: (context, params) => const SubmitQuestionFormWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -415,7 +407,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

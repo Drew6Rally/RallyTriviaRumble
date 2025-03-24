@@ -3,14 +3,8 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'submit_answer_form_model.dart';
 export 'submit_answer_form_model.dart';
 
@@ -46,8 +40,8 @@ class _SubmitAnswerFormWidgetState extends State<SubmitAnswerFormWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -59,8 +53,8 @@ class _SubmitAnswerFormWidgetState extends State<SubmitAnswerFormWidget>
             curve: Curves.bounceOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -78,15 +72,15 @@ class _SubmitAnswerFormWidgetState extends State<SubmitAnswerFormWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 30.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 30.0),
+            end: const Offset(0.0, 0.0),
           ),
           ScaleEffect(
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.4, 1.0),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(0.4, 1.0),
+            end: const Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -123,7 +117,7 @@ class _SubmitAnswerFormWidgetState extends State<SubmitAnswerFormWidget>
             Material(
               color: Colors.transparent,
               elevation: 3.0,
-              shape: RoundedRectangleBorder(
+              shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(16.0),
                   bottomRight: Radius.circular(16.0),
@@ -136,7 +130,7 @@ class _SubmitAnswerFormWidgetState extends State<SubmitAnswerFormWidget>
                 height: MediaQuery.sizeOf(context).height * 0.996,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(16.0),
                     bottomRight: Radius.circular(16.0),
                     topLeft: Radius.circular(0.0),
@@ -145,7 +139,7 @@ class _SubmitAnswerFormWidgetState extends State<SubmitAnswerFormWidget>
                 ),
                 child: Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(20.0, 44.0, 20.0, 20.0),
+                      const EdgeInsetsDirectional.fromSTEB(20.0, 44.0, 20.0, 20.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -189,7 +183,7 @@ class _SubmitAnswerFormWidgetState extends State<SubmitAnswerFormWidget>
                         ],
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             10.0, 4.0, 20.0, 12.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -218,11 +212,11 @@ class _SubmitAnswerFormWidgetState extends State<SubmitAnswerFormWidget>
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
                         child: Container(
                           width: MediaQuery.sizeOf(context).width * 0.932,
                           height: 593.76,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             boxShadow: [
                               BoxShadow(
                                 blurRadius: 6.0,
@@ -242,11 +236,11 @@ class _SubmitAnswerFormWidgetState extends State<SubmitAnswerFormWidget>
                             shape: BoxShape.rectangle,
                           ),
                           child: Align(
-                            alignment: AlignmentDirectional(-1.0, -1.0),
+                            alignment: const AlignmentDirectional(-1.0, -1.0),
                             child: wrapWithModel(
                               model: _model.submitAnswerFormComponentModel,
                               updateCallback: () => safeSetState(() {}),
-                              child: SubmitAnswerFormComponentWidget(),
+                              child: const SubmitAnswerFormComponentWidget(),
                             ),
                           ),
                         ).animateOnPageLoad(

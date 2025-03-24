@@ -1,4 +1,3 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
@@ -6,15 +5,9 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
-import 'dart:math';
-import 'dart:ui';
 import '/index.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'complete_profile_model.dart';
 export 'complete_profile_model.dart';
 
@@ -67,15 +60,15 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
             curve: Curves.bounceOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 19.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 19.0),
+            end: const Offset(0.0, 0.0),
           ),
           ScaleEffect(
             curve: Curves.bounceOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(1.0, 1.0),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(1.0, 1.0),
+            end: const Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -93,15 +86,15 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
             curve: Curves.easeInOut,
             delay: 50.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 20.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 20.0),
+            end: const Offset(0.0, 0.0),
           ),
           ScaleEffect(
             curve: Curves.easeInOut,
             delay: 50.0.ms,
             duration: 600.0.ms,
-            begin: Offset(1.0, 1.0),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(1.0, 1.0),
+            end: const Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -119,15 +112,15 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
             curve: Curves.easeInOut,
             delay: 100.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 20.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 20.0),
+            end: const Offset(0.0, 0.0),
           ),
           ScaleEffect(
             curve: Curves.easeInOut,
             delay: 100.0.ms,
             duration: 600.0.ms,
-            begin: Offset(1.0, 1.0),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(1.0, 1.0),
+            end: const Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -145,15 +138,15 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 40.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 40.0),
+            end: const Offset(0.0, 0.0),
           ),
           ScaleEffect(
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: Offset(1.0, 1.0),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(1.0, 1.0),
+            end: const Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -171,15 +164,15 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
             curve: Curves.bounceOut,
             delay: 400.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 40.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 40.0),
+            end: const Offset(0.0, 0.0),
           ),
           ScaleEffect(
             curve: Curves.bounceOut,
             delay: 400.0.ms,
             duration: 600.0.ms,
-            begin: Offset(1.0, 1.0),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(1.0, 1.0),
+            end: const Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -223,7 +216,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                 letterSpacing: 0.0,
               ),
         ),
-        actions: [],
+        actions: const [],
         centerTitle: false,
         elevation: 0.0,
       ),
@@ -246,7 +239,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
                   child: FutureBuilder<List<ProfilesRow>>(
                     future: ProfilesTable().queryRows(
                       queryFn: (q) => q,
@@ -324,7 +317,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                           width: 100.0,
                           height: 100.0,
                           clipBehavior: Clip.antiAlias,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                           ),
                           child: Image.network(
@@ -350,7 +343,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                 ).animateOnPageLoad(animationsMap['textOnPageLoadAnimation']!),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
                   child: TextFormField(
                     controller: _model.yourNameTextController,
                     focusNode: _model.yourNameFocusNode,
@@ -370,28 +363,28 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                                 letterSpacing: 0.0,
                               ),
                       enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color(0x00000000),
                           width: 1.0,
                         ),
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color(0x00000000),
                           width: 1.0,
                         ),
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color(0x00000000),
                           width: 1.0,
                         ),
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       focusedErrorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color(0x00000000),
                           width: 1.0,
                         ),
@@ -400,7 +393,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                       filled: true,
                       fillColor:
                           FlutterFlowTheme.of(context).secondaryBackground,
-                      contentPadding: EdgeInsetsDirectional.fromSTEB(
+                      contentPadding: const EdgeInsetsDirectional.fromSTEB(
                           20.0, 24.0, 20.0, 24.0),
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -414,7 +407,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
                   child: TextFormField(
                     controller: _model.yourDisplayNameTextController,
                     focusNode: _model.yourDisplayNameFocusNode,
@@ -437,28 +430,28 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                                 letterSpacing: 0.0,
                               ),
                       enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color(0x00000000),
                           width: 1.0,
                         ),
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color(0x00000000),
                           width: 1.0,
                         ),
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color(0x00000000),
                           width: 1.0,
                         ),
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       focusedErrorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color(0x00000000),
                           width: 1.0,
                         ),
@@ -467,7 +460,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                       filled: true,
                       fillColor:
                           FlutterFlowTheme.of(context).secondaryBackground,
-                      contentPadding: EdgeInsetsDirectional.fromSTEB(
+                      contentPadding: const EdgeInsetsDirectional.fromSTEB(
                           20.0, 24.0, 20.0, 24.0),
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -481,9 +474,9 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                       animationsMap['textFieldOnPageLoadAnimation2']!),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                   child: StreamBuilder<UsersRecord>(
-                    stream: UsersRecord.getDocument(widget!.userReference!),
+                    stream: UsersRecord.getDocument(widget.userReference!),
                     builder: (context, snapshot) {
                       // Customize what your widget looks like when it's loading.
                       if (!snapshot.hasData) {
@@ -504,7 +497,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
 
                       return FFButtonWidget(
                         onPressed: () async {
-                          await widget!.userReference!
+                          await widget.userReference!
                               .update(createUsersRecordData(
                             displayName:
                                 _model.yourDisplayNameTextController.text,
@@ -521,9 +514,9 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                         options: FFButtonOptions(
                           width: 230.0,
                           height: 50.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).primary,
                           textStyle: FlutterFlowTheme.of(context)
@@ -534,7 +527,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                                 letterSpacing: 0.0,
                               ),
                           elevation: 3.0,
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.transparent,
                             width: 1.0,
                           ),

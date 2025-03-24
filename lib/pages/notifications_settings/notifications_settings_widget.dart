@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'notifications_settings_model.dart';
 export 'notifications_settings_model.dart';
 
@@ -69,7 +66,7 @@ class _NotificationsSettingsWidgetState
                 letterSpacing: 0.0,
               ),
         ),
-        actions: [],
+        actions: const [],
         centerTitle: false,
         elevation: 0.0,
       ),
@@ -88,7 +85,7 @@ class _NotificationsSettingsWidgetState
           mainAxisSize: MainAxisSize.max,
           children: [
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -107,13 +104,13 @@ class _NotificationsSettingsWidgetState
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
               child: Material(
                 color: Colors.transparent,
                 child: SwitchListTile.adaptive(
                   value: _model.switchListTileValue1 ??= true,
                   onChanged: (newValue) async {
-                    safeSetState(() => _model.switchListTileValue1 = newValue!);
+                    safeSetState(() => _model.switchListTileValue1 = newValue);
                   },
                   title: Text(
                     FFLocalizations.of(context).getText(
@@ -139,7 +136,7 @@ class _NotificationsSettingsWidgetState
                   dense: false,
                   controlAffinity: ListTileControlAffinity.trailing,
                   contentPadding:
-                      EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 24.0, 12.0),
+                      const EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 24.0, 12.0),
                 ),
               ),
             ),
@@ -148,7 +145,7 @@ class _NotificationsSettingsWidgetState
               child: SwitchListTile.adaptive(
                 value: _model.switchListTileValue2 ??= true,
                 onChanged: (newValue) async {
-                  safeSetState(() => _model.switchListTileValue2 = newValue!);
+                  safeSetState(() => _model.switchListTileValue2 = newValue);
                 },
                 title: Text(
                   FFLocalizations.of(context).getText(
@@ -174,7 +171,7 @@ class _NotificationsSettingsWidgetState
                 dense: false,
                 controlAffinity: ListTileControlAffinity.trailing,
                 contentPadding:
-                    EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 24.0, 12.0),
+                    const EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 24.0, 12.0),
               ),
             ),
             Material(
@@ -182,7 +179,7 @@ class _NotificationsSettingsWidgetState
               child: SwitchListTile.adaptive(
                 value: _model.switchListTileValue3 ??= true,
                 onChanged: (newValue) async {
-                  safeSetState(() => _model.switchListTileValue3 = newValue!);
+                  safeSetState(() => _model.switchListTileValue3 = newValue);
                 },
                 title: Text(
                   FFLocalizations.of(context).getText(
@@ -208,11 +205,11 @@ class _NotificationsSettingsWidgetState
                 dense: false,
                 controlAffinity: ListTileControlAffinity.trailing,
                 contentPadding:
-                    EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 24.0, 12.0),
+                    const EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 24.0, 12.0),
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
               child: FFButtonWidget(
                 onPressed: () async {
                   context.pop();
@@ -223,9 +220,9 @@ class _NotificationsSettingsWidgetState
                 options: FFButtonOptions(
                   width: 190.0,
                   height: 50.0,
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   iconPadding:
-                      EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: FlutterFlowTheme.of(context).primary,
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                         fontFamily: 'Manrope',
@@ -233,7 +230,7 @@ class _NotificationsSettingsWidgetState
                         letterSpacing: 0.0,
                       ),
                   elevation: 3.0,
-                  borderSide: BorderSide(
+                  borderSide: const BorderSide(
                     color: Colors.transparent,
                     width: 1.0,
                   ),

@@ -11,7 +11,7 @@ class PlayerAnswerSubmissionsTable
 }
 
 class PlayerAnswerSubmissionsRow extends SupabaseDataRow {
-  PlayerAnswerSubmissionsRow(Map<String, dynamic> data) : super(data);
+  PlayerAnswerSubmissionsRow(super.data);
 
   @override
   SupabaseTable get table => PlayerAnswerSubmissionsTable();

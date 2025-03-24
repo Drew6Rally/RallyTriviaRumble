@@ -1,0 +1,5 @@
+2025/03/23-20:40:36.723 1e34 Log #3: 2 ops saved to Table #4 OK
+2025/03/23-20:40:36.739 1e34 Archiving C:\Users\mattm\AppData\Local\Temp\flutter_tools.65a85b5e\flutter_tools_chrome_device.bd40ac93\Default\Site Characteristics Database/000003.log: OK
+2025/03/23-20:40:36.739 1e34 Table #4: 2 entries OK
+2025/03/23-20:40:36.741 1e34 Archiving C:\Users\mattm\AppData\Local\Temp\flutter_tools.65a85b5e\flutter_tools_chrome_device.bd40ac93\Default\Site Characteristics Database/MANIFEST-000001: OK
+2025/03/23-20:40:36.754 1e34 **** Repaired leveldb C:\Users\mattm\AppData\Local\Temp\flutter_tools.65a85b5e\flutter_tools_chrome_device.bd40ac93\Default\Site Characteristics Database; recovered 1 files; 191 bytes. Some data may have been lost. ****

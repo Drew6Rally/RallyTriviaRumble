@@ -9,7 +9,7 @@ class LeaderboardTable extends SupabaseTable<LeaderboardRow> {
 }
 
 class LeaderboardRow extends SupabaseDataRow {
-  LeaderboardRow(Map<String, dynamic> data) : super(data);
+  LeaderboardRow(super.data);
 
   @override
   SupabaseTable get table => LeaderboardTable();

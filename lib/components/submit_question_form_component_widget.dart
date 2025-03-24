@@ -3,10 +3,8 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import '/index.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'submit_question_form_component_model.dart';
 export 'submit_question_form_component_model.dart';
@@ -76,7 +74,7 @@ class _SubmitQuestionFormComponentWidgetState
               width: 1000.0,
               height: 784.1,
               decoration: BoxDecoration(
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                     blurRadius: 3.0,
                     color: Color(0x33000000),
@@ -90,13 +88,13 @@ class _SubmitQuestionFormComponentWidgetState
                 gradient: LinearGradient(
                   colors: [
                     FlutterFlowTheme.of(context).primaryBackground,
-                    Color(0x3AF2A384)
+                    const Color(0x3AF2A384)
                   ],
-                  stops: [0.0, 1.0],
-                  begin: AlignmentDirectional(0.94, -1.0),
-                  end: AlignmentDirectional(-0.94, 1.0),
+                  stops: const [0.0, 1.0],
+                  begin: const AlignmentDirectional(0.94, -1.0),
+                  end: const AlignmentDirectional(-0.94, 1.0),
                 ),
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(0.0),
                   bottomRight: Radius.circular(0.0),
                   topLeft: Radius.circular(0.0),
@@ -109,13 +107,13 @@ class _SubmitQuestionFormComponentWidgetState
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Align(
-                        alignment: AlignmentDirectional(1.0, -1.0),
+                        alignment: const AlignmentDirectional(1.0, -1.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(1.0, 0.0),
+                              alignment: const AlignmentDirectional(1.0, 0.0),
                               child: Card(
                                 clipBehavior: Clip.antiAliasWithSaveLayer,
                                 color: FlutterFlowTheme.of(context)
@@ -124,7 +122,7 @@ class _SubmitQuestionFormComponentWidgetState
                                   borderRadius: BorderRadius.circular(30.0),
                                 ),
                                 child: Align(
-                                  alignment: AlignmentDirectional(1.0, 0.0),
+                                  alignment: const AlignmentDirectional(1.0, 0.0),
                                   child: FlutterFlowIconButton(
                                     borderColor: Colors.transparent,
                                     borderRadius: 30.0,
@@ -146,13 +144,13 @@ class _SubmitQuestionFormComponentWidgetState
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 16.0, 16.0, 16.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 50.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
@@ -171,7 +169,7 @@ class _SubmitQuestionFormComponentWidgetState
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 0.0, 0.0, 0.0),
                                   child: Text(
                                     valueOrDefault<String>(
@@ -197,21 +195,21 @@ class _SubmitQuestionFormComponentWidgetState
                                 ),
                               ],
                             ),
-                          ].divide(SizedBox(height: 16.0)),
+                          ].divide(const SizedBox(height: 16.0)),
                         ),
                       ),
                     ],
                   ),
                   Align(
-                    alignment: AlignmentDirectional(0.5, 0.0),
+                    alignment: const AlignmentDirectional(0.5, 0.0),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 40.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 40.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
-                            child: Container(
+                            child: SizedBox(
                               width: 200.0,
                               child: TextFormField(
                                 controller: _model.textController,
@@ -236,14 +234,14 @@ class _SubmitQuestionFormComponentWidgetState
                                         letterSpacing: 0.0,
                                       ),
                                   enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0x00000000),
                                       width: 1.0,
                                     ),
@@ -287,10 +285,10 @@ class _SubmitQuestionFormComponentWidgetState
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(0.0, -0.26),
+                    alignment: const AlignmentDirectional(0.0, -0.26),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 40.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 40.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -345,7 +343,7 @@ class _SubmitQuestionFormComponentWidgetState
           ],
         ),
         Align(
-          alignment: AlignmentDirectional(0.0, 0.85),
+          alignment: const AlignmentDirectional(0.0, 0.85),
           child: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -367,7 +365,7 @@ class _SubmitQuestionFormComponentWidgetState
                     context.pushNamed(
                       HomeWidget.routeName,
                       extra: <String, dynamic>{
-                        kTransitionInfoKey: TransitionInfo(
+                        kTransitionInfoKey: const TransitionInfo(
                           hasTransition: true,
                           transitionType: PageTransitionType.topToBottom,
                           duration: Duration(milliseconds: 1000),
@@ -382,10 +380,10 @@ class _SubmitQuestionFormComponentWidgetState
                     width: 166.1,
                     height: 38.51,
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                     iconAlignment: IconAlignment.start,
                     iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).secondaryBackground,
                     textStyle:
                         FlutterFlowTheme.of(context).displayLarge.override(

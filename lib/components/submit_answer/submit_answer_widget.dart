@@ -1,9 +1,6 @@
 import '/components/submit_answer_form_component_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'submit_answer_model.dart';
 export 'submit_answer_model.dart';
 
@@ -41,7 +38,7 @@ class _SubmitAnswerWidgetState extends State<SubmitAnswerWidget> {
     return wrapWithModel(
       model: _model.submitAnswerFormComponentModel,
       updateCallback: () => safeSetState(() {}),
-      child: SubmitAnswerFormComponentWidget(),
+      child: const SubmitAnswerFormComponentWidget(),
     );
   }
 }

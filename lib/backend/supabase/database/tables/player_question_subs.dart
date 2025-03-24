@@ -10,7 +10,7 @@ class PlayerQuestionSubsTable extends SupabaseTable<PlayerQuestionSubsRow> {
 }
 
 class PlayerQuestionSubsRow extends SupabaseDataRow {
-  PlayerQuestionSubsRow(Map<String, dynamic> data) : super(data);
+  PlayerQuestionSubsRow(super.data);
 
   @override
   SupabaseTable get table => PlayerQuestionSubsTable();
