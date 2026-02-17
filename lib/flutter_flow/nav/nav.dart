@@ -123,6 +123,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         ),
         FFRoute(
           name: HomeWidget.routeName,
+          requireAuth: true,
           path: HomeWidget.routePath,
           builder: (context, params) => params.isEmpty
               ? NavBarPage(initialPage: 'Home')
@@ -133,11 +134,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         ),
         FFRoute(
           name: PreviousQuestionsWidget.routeName,
+          requireAuth: true,
           path: PreviousQuestionsWidget.routePath,
           builder: (context, params) => PreviousQuestionsWidget(),
         ),
         FFRoute(
           name: MYProfilePageWidget.routeName,
+          requireAuth: true,
           path: MYProfilePageWidget.routePath,
           builder: (context, params) => params.isEmpty
               ? NavBarPage(initialPage: 'MY_profilePage')
@@ -148,21 +151,25 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         ),
         FFRoute(
           name: SubmitAnswerFormWidget.routeName,
+          requireAuth: true,
           path: SubmitAnswerFormWidget.routePath,
           builder: (context, params) => SubmitAnswerFormWidget(),
         ),
         FFRoute(
           name: EditProfileWidget.routeName,
+          requireAuth: true,
           path: EditProfileWidget.routePath,
           builder: (context, params) => EditProfileWidget(),
         ),
         FFRoute(
           name: ChangePasswordWidget.routeName,
+          requireAuth: true,
           path: ChangePasswordWidget.routePath,
           builder: (context, params) => ChangePasswordWidget(),
         ),
         FFRoute(
           name: NotificationsSettingsWidget.routeName,
+          requireAuth: true,
           path: NotificationsSettingsWidget.routePath,
           builder: (context, params) => NotificationsSettingsWidget(),
         ),
@@ -173,11 +180,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         ),
         FFRoute(
           name: ProfilepageWidget.routeName,
+          requireAuth: true,
           path: ProfilepageWidget.routePath,
           builder: (context, params) => ProfilepageWidget(),
         ),
         FFRoute(
           name: SubmitQuestionFormWidget.routeName,
+          requireAuth: true,
           path: SubmitQuestionFormWidget.routePath,
           builder: (context, params) => SubmitQuestionFormWidget(),
         )
@@ -248,7 +257,7 @@ extension GoRouterExtensions on GoRouter {
       !ignoreRedirect && appState.hasRedirect();
   void clearRedirectLocation() => appState.clearRedirectLocation();
   void setRedirectLocationIfUnset(String location) =>
-      appState.updateNotifyOnAuthChange(false);
+      appState.setRedirectLocationIfUnset(location);
 }
 
 extension _GoRouterStateExtensions on GoRouterState {
