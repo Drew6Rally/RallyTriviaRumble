@@ -23,19 +23,93 @@ void main() async {
   GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();
 
-  await initFirebase();
+  runApp(const AppBootstrap());
+}
 
-  await SupaFlow.initialize();
+class AppBootstrap extends StatefulWidget {
+  const AppBootstrap({super.key});
+
+  @override
+  State<AppBootstrap> createState() => _AppBootstrapState();
+}
 
   await AppTheme.initialize();
 
   final appState = AppState(); // Initialize AppState
   await appState.initializePersistedState();
 
-  runApp(ChangeNotifierProvider(
-    create: (context) => appState,
-    child: MyApp(),
-  ));
+  Future<FFAppState> _initializeDependencies() async {
+    await initFirebase();
+    await SupaFlow.initialize();
+    await FlutterFlowTheme.initialize();
+
+    final appState = FFAppState();
+    await appState.initializePersistedState();
+    return appState;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<FFAppState>(
+      future: _initialization,
+      builder: (context, snapshot) {
+        if (snapshot.hasError) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: _StartupErrorScreen(error: snapshot.error),
+          );
+        }
+
+        if (!snapshot.hasData) {
+          return const MaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: Scaffold(
+              body: Center(child: CircularProgressIndicator()),
+            ),
+          );
+        }
+
+        return ChangeNotifierProvider(
+          create: (context) => snapshot.data!,
+          child: MyApp(),
+        );
+      },
+    );
+  }
+}
+
+class _StartupErrorScreen extends StatelessWidget {
+  const _StartupErrorScreen({required this.error});
+
+  final Object? error;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(24.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Icon(Icons.error_outline, color: Colors.red, size: 56.0),
+              const SizedBox(height: 16.0),
+              const Text(
+                'App failed to initialize',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.w600),
+              ),
+              const SizedBox(height: 8.0),
+              Text(
+                error?.toString() ?? 'Unknown error',
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class MyApp extends StatefulWidget {
