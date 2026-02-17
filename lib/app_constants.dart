@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'flutter_flow/flutter_flow_util.dart';
+import 'app/app_utils.dart';
 
 abstract class FFAppConstants {
   static const String noProfilePic =

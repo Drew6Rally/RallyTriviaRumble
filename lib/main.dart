@@ -10,12 +10,12 @@ import 'auth/firebase_auth/auth_util.dart';
 
 import '/backend/supabase/supabase.dart';
 import 'backend/firebase/firebase_config.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import 'flutter_flow/flutter_flow_util.dart';
-import 'flutter_flow/internationalization.dart';
+import '/app/app_theme.dart';
+import 'app/app_utils.dart';
+import 'app/internationalization.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'flutter_flow/nav/nav.dart';
+import 'app/nav/nav.dart';
 import 'index.dart';
 
 void main() async {

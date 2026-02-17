@@ -8,9 +8,9 @@ import '/backend/schema/structs/index.dart';
 import '/backend/schema/enums/enums.dart';
 import '/backend/supabase/supabase.dart';
 
-import '../../flutter_flow/lat_lng.dart';
-import '../../flutter_flow/place.dart';
-import '../../flutter_flow/uploaded_file.dart';
+import '../../app/lat_lng.dart';
+import '../../app/place.dart';
+import '../../app/uploaded_file.dart';
 
 /// SERIALIZATION HELPERS
 

@@ -1,11 +1,11 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_animations.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/upload_data.dart';
+import '/app/app_animations.dart';
+import '/app/app_theme.dart';
+import '/app/app_utils.dart';
+import '/app/app_widgets.dart';
+import '/app/upload_data.dart';
 import 'dart:math';
 import 'dart:ui';
 import '/index.dart';
