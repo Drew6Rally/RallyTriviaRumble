@@ -4,7 +4,7 @@ import 'package:from_css_color/from_css_color.dart';
 
 import '/backend/schema/enums/enums.dart';
 import '/backend/schema/util/schema_util.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '/app/app_utils.dart';
 
 typedef RecordBuilder<T> = T Function(DocumentSnapshot snapshot);
 
@@ -14,8 +14,8 @@ abstract class FirestoreRecord {
   DocumentReference reference;
 }
 
-abstract class FFFirebaseStruct extends BaseStruct {
-  FFFirebaseStruct(this.firestoreUtilData);
+abstract class FirebaseStruct extends BaseStruct {
+  FirebaseStruct(this.firestoreUtilData);
 
   /// Utility class for Firestore updates
   FirestoreUtilData firestoreUtilData = FirestoreUtilData();

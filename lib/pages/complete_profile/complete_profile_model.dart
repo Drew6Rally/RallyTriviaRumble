@@ -1,11 +1,11 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_animations.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/upload_data.dart';
+import '/app/app_animations.dart';
+import '/app/app_theme.dart';
+import '/app/app_utils.dart';
+import '/app/app_widgets.dart';
+import '/app/upload_data.dart';
 import 'dart:math';
 import 'dart:ui';
 import '/index.dart';
@@ -17,13 +17,13 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class CompleteProfileModel extends FlutterFlowModel<CompleteProfileWidget> {
+class CompleteProfileModel extends AppModel<CompleteProfileWidget> {
   ///  State fields for stateful widgets in this page.
 
   final formKey = GlobalKey<FormState>();
   bool isDataUploading = false;
-  FFUploadedFile uploadedLocalFile =
-      FFUploadedFile(bytes: Uint8List.fromList([]));
+  AppUploadedFile uploadedLocalFile =
+      AppUploadedFile(bytes: Uint8List.fromList([]));
   String uploadedFileUrl = '';
 
   // State field(s) for yourName widget.
@@ -32,7 +32,7 @@ class CompleteProfileModel extends FlutterFlowModel<CompleteProfileWidget> {
   String? Function(BuildContext, String?)? yourNameTextControllerValidator;
   String? _yourNameTextControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
+      return AppLocalizations.of(context).getText(
         '1eac148w' /* Field is required */,
       );
     }
@@ -48,7 +48,7 @@ class CompleteProfileModel extends FlutterFlowModel<CompleteProfileWidget> {
   String? _yourDisplayNameTextControllerValidator(
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
+      return AppLocalizations.of(context).getText(
         'ew7dbn3s' /* Field is required */,
       );
     }

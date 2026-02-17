@@ -1,7 +1,7 @@
 import '/auth/firebase_auth/auth_util.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '/app/app_theme.dart';
+import '/app/app_utils.dart';
+import '/app/app_widgets.dart';
 import 'dart:ui';
 import '/index.dart';
 import 'register_account_widget.dart' show RegisterAccountWidget;
@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class RegisterAccountModel extends FlutterFlowModel<RegisterAccountWidget> {
+class RegisterAccountModel extends AppModel<RegisterAccountWidget> {
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for emailAddress widget.

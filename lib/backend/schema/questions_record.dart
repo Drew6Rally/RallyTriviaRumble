@@ -7,7 +7,7 @@ import '/backend/schema/util/schema_util.dart';
 import '/backend/schema/enums/enums.dart';
 
 import 'index.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '/app/app_utils.dart';
 
 class QuestionsRecord extends FirestoreRecord {
   QuestionsRecord._(

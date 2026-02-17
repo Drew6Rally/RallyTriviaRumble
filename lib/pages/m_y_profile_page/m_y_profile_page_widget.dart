@@ -1,8 +1,8 @@
 import '/auth/firebase_auth/auth_util.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '/app/app_icon_button.dart';
+import '/app/app_theme.dart';
+import '/app/app_utils.dart';
+import '/app/app_widgets.dart';
 import 'dart:ui';
 import '/index.dart';
 import 'package:flutter/material.dart';
@@ -43,7 +43,7 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      backgroundColor: AppTheme.of(context).primaryBackground,
       body: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -63,8 +63,8 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
               ],
               gradient: LinearGradient(
                 colors: [
-                  FlutterFlowTheme.of(context).primary,
-                  FlutterFlowTheme.of(context).secondaryBackground
+                  AppTheme.of(context).primary,
+                  AppTheme.of(context).secondaryBackground
                 ],
                 stops: [0.0, 1.0],
                 begin: AlignmentDirectional(0.94, -1.0),
@@ -86,7 +86,7 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                       children: [
                         Card(
                           clipBehavior: Clip.antiAliasWithSaveLayer,
-                          color: FlutterFlowTheme.of(context).primary,
+                          color: AppTheme.of(context).primary,
                           elevation: 2.0,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(40.0),
@@ -122,13 +122,13 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                                     color: Color(0x40000000),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
-                                  child: FlutterFlowIconButton(
+                                  child: AppIconButton(
                                     borderColor: Colors.transparent,
                                     borderRadius: 30.0,
                                     buttonSize: 46.0,
                                     icon: Icon(
                                       Icons.login_rounded,
-                                      color: FlutterFlowTheme.of(context)
+                                      color: AppTheme.of(context)
                                           .textColor,
                                       size: 25.0,
                                     ),
@@ -157,14 +157,14 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Text(
-                          FFLocalizations.of(context).getText(
+                          AppLocalizations.of(context).getText(
                             'i16gr6pz' /* [User Name Here] */,
                           ),
-                          style: FlutterFlowTheme.of(context)
+                          style: AppTheme.of(context)
                               .headlineSmall
                               .override(
                                 fontFamily: 'Urbanist',
-                                color: FlutterFlowTheme.of(context).textColor,
+                                color: AppTheme.of(context).textColor,
                                 letterSpacing: 0.0,
                               ),
                         ),
@@ -178,11 +178,11 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                         child: Text(
-                          FFLocalizations.of(context).getText(
+                          AppLocalizations.of(context).getText(
                             'eixjjzil' /* User.name@domainname.com */,
                           ),
                           style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
+                              AppTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Manrope',
                                     color: Color(0xB3FFFFFF),
                                     letterSpacing: 0.0,
@@ -194,14 +194,14 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                         padding:
                             EdgeInsetsDirectional.fromSTEB(4.0, 8.0, 0.0, 0.0),
                         child: Text(
-                          FFLocalizations.of(context).getText(
+                          AppLocalizations.of(context).getText(
                             '6nzex4pe' /* User.name@domainname.com */,
                           ),
-                          style: FlutterFlowTheme.of(context)
+                          style: AppTheme.of(context)
                               .bodyMedium
                               .override(
                                 fontFamily: 'Manrope',
-                                color: FlutterFlowTheme.of(context).textColor,
+                                color: AppTheme.of(context).textColor,
                                 letterSpacing: 0.0,
                                 fontWeight: FontWeight.w500,
                               ),
@@ -222,10 +222,10 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Text(
-                      FFLocalizations.of(context).getText(
+                      AppLocalizations.of(context).getText(
                         'f1bvbey3' /* My Account */,
                       ),
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      style: AppTheme.of(context).bodyMedium.override(
                             fontFamily: 'Manrope',
                             letterSpacing: 0.0,
                           ),
@@ -257,10 +257,10 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                     width: MediaQuery.sizeOf(context).width * 0.9,
                     height: 60.0,
                     decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).primaryBackground,
+                      color: AppTheme.of(context).primaryBackground,
                       borderRadius: BorderRadius.circular(8.0),
                       border: Border.all(
-                        color: FlutterFlowTheme.of(context).alternate,
+                        color: AppTheme.of(context).alternate,
                         width: 2.0,
                       ),
                     ),
@@ -272,17 +272,17 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            FFLocalizations.of(context).getText(
+                            AppLocalizations.of(context).getText(
                               'i61y9ibx' /* Edit Profile */,
                             ),
-                            style: FlutterFlowTheme.of(context)
+                            style: AppTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Manrope',
                                   letterSpacing: 0.0,
                                 ),
                           ),
-                          FlutterFlowIconButton(
+                          AppIconButton(
                             borderColor: Colors.transparent,
                             borderRadius: 30.0,
                             buttonSize: 46.0,
@@ -327,10 +327,10 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                       width: MediaQuery.sizeOf(context).width * 0.9,
                       height: 60.0,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        color: AppTheme.of(context).primaryBackground,
                         borderRadius: BorderRadius.circular(8.0),
                         border: Border.all(
-                          color: FlutterFlowTheme.of(context).alternate,
+                          color: AppTheme.of(context).alternate,
                           width: 2.0,
                         ),
                       ),
@@ -342,17 +342,17 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              FFLocalizations.of(context).getText(
+                              AppLocalizations.of(context).getText(
                                 '03k0vw86' /* Change Password */,
                               ),
-                              style: FlutterFlowTheme.of(context)
+                              style: AppTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Manrope',
                                     letterSpacing: 0.0,
                                   ),
                             ),
-                            FlutterFlowIconButton(
+                            AppIconButton(
                               borderColor: Colors.transparent,
                               borderRadius: 30.0,
                               buttonSize: 46.0,
@@ -398,10 +398,10 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                       width: MediaQuery.sizeOf(context).width * 0.9,
                       height: 60.0,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        color: AppTheme.of(context).primaryBackground,
                         borderRadius: BorderRadius.circular(8.0),
                         border: Border.all(
-                          color: FlutterFlowTheme.of(context).alternate,
+                          color: AppTheme.of(context).alternate,
                           width: 2.0,
                         ),
                       ),
@@ -413,17 +413,17 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              FFLocalizations.of(context).getText(
+                              AppLocalizations.of(context).getText(
                                 '6w6wv95p' /* Notification Settings */,
                               ),
-                              style: FlutterFlowTheme.of(context)
+                              style: AppTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Manrope',
                                     letterSpacing: 0.0,
                                   ),
                             ),
-                            FlutterFlowIconButton(
+                            AppIconButton(
                               borderColor: Colors.transparent,
                               borderRadius: 30.0,
                               buttonSize: 46.0,
@@ -469,10 +469,10 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                       width: MediaQuery.sizeOf(context).width * 0.9,
                       height: 60.0,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        color: AppTheme.of(context).primaryBackground,
                         borderRadius: BorderRadius.circular(8.0),
                         border: Border.all(
-                          color: FlutterFlowTheme.of(context).alternate,
+                          color: AppTheme.of(context).alternate,
                           width: 2.0,
                         ),
                       ),
@@ -484,17 +484,17 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              FFLocalizations.of(context).getText(
+                              AppLocalizations.of(context).getText(
                                 'eojlfs66' /* Privacy Policy */,
                               ),
-                              style: FlutterFlowTheme.of(context)
+                              style: AppTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Manrope',
                                     letterSpacing: 0.0,
                                   ),
                             ),
-                            FlutterFlowIconButton(
+                            AppIconButton(
                               borderColor: Colors.transparent,
                               borderRadius: 30.0,
                               buttonSize: 46.0,
@@ -519,21 +519,21 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
           if (!(Theme.of(context).brightness == Brightness.dark))
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
-              child: FFButtonWidget(
+              child: AppButton(
                 onPressed: () async {
                   setDarkModeSetting(context, ThemeMode.dark);
                 },
-                text: FFLocalizations.of(context).getText(
+                text: AppLocalizations.of(context).getText(
                   '2ll42t1u' /* Dark Mode */,
                 ),
-                options: FFButtonOptions(
+                options: AppButtonOptions(
                   width: 130.0,
                   height: 40.0,
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   iconPadding:
                       EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                  color: FlutterFlowTheme.of(context).secondary,
-                  textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                  color: AppTheme.of(context).secondary,
+                  textStyle: AppTheme.of(context).titleSmall.override(
                         fontFamily: 'Manrope',
                         color: Colors.white,
                         letterSpacing: 0.0,

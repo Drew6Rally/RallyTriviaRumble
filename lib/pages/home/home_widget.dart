@@ -1,8 +1,8 @@
 import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_animations.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '/app/app_animations.dart';
+import '/app/app_theme.dart';
+import '/app/app_utils.dart';
+import '/app/app_widgets.dart';
 import 'dart:math';
 import 'dart:ui';
 import '/index.dart';
@@ -50,7 +50,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
               dateTimeFormat(
                 "yMd",
                 getCurrentTimestamp,
-                locale: FFLocalizations.of(context).languageCode,
+                locale: AppLocalizations.of(context).languageCode,
               ),
             )
             .order('Date'),
@@ -181,11 +181,11 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<PlayerQuestionSubsRow>>(
-      future: FFAppState().todaysQuestionData(
+      future: AppState().todaysQuestionData(
         uniqueQueryKey: dateTimeFormat(
           "yMd",
           getCurrentTimestamp,
-          locale: FFLocalizations.of(context).languageCode,
+          locale: AppLocalizations.of(context).languageCode,
         ),
         requestFn: () => PlayerQuestionSubsTable().queryRows(
           queryFn: (q) => q,
@@ -195,14 +195,14 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
         // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {
           return Scaffold(
-            backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+            backgroundColor: AppTheme.of(context).primaryBackground,
             body: Center(
               child: SizedBox(
                 width: 50.0,
                 height: 50.0,
                 child: CircularProgressIndicator(
                   valueColor: AlwaysStoppedAnimation<Color>(
-                    FlutterFlowTheme.of(context).primary,
+                    AppTheme.of(context).primary,
                   ),
                 ),
               ),
@@ -214,18 +214,18 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
 
         return Scaffold(
           key: scaffoldKey,
-          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+          backgroundColor: AppTheme.of(context).primaryBackground,
           appBar: PreferredSize(
             preferredSize: Size.fromHeight(60.0),
             child: AppBar(
-              backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+              backgroundColor: AppTheme.of(context).primaryBackground,
               automaticallyImplyLeading: false,
               title: Text(
-                FFLocalizations.of(context).getText(
+                AppLocalizations.of(context).getText(
                   'xn2so8km' /* Rally Trivia Rumble */,
                 ),
                 textAlign: TextAlign.start,
-                style: FlutterFlowTheme.of(context).displaySmall.override(
+                style: AppTheme.of(context).displaySmall.override(
                       fontFamily: 'Urbanist',
                       letterSpacing: 0.0,
                     ),
@@ -254,7 +254,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                               width: 100.0,
                               height: 100.0,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
+                                color: AppTheme.of(context)
                                     .secondaryBackground,
                                 shape: BoxShape.rectangle,
                               ),
@@ -318,14 +318,14 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       10.0, 10.0, 30.0, 0.0),
                                   child: Text(
-                                    FFLocalizations.of(context).getText(
+                                    AppLocalizations.of(context).getText(
                                       '1vsjb2jq' /* Today's Trivia Host */,
                                     ),
-                                    style: FlutterFlowTheme.of(context)
+                                    style: AppTheme.of(context)
                                         .displaySmall
                                         .override(
                                           fontFamily: 'Urbanist',
-                                          color: FlutterFlowTheme.of(context)
+                                          color: AppTheme.of(context)
                                               .primaryText,
                                           fontSize: 28.0,
                                           letterSpacing: 0.0,
@@ -344,7 +344,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                         dateTimeFormat(
                                           "yMd",
                                           getCurrentTimestamp,
-                                          locale: FFLocalizations.of(context)
+                                          locale: AppLocalizations.of(context)
                                               .languageCode,
                                         ),
                                       ),
@@ -359,7 +359,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                             child: CircularProgressIndicator(
                                               valueColor:
                                                   AlwaysStoppedAnimation<Color>(
-                                                FlutterFlowTheme.of(context)
+                                                AppTheme.of(context)
                                                     .primary,
                                               ),
                                             ),
@@ -379,10 +379,10 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
 
                                       return Text(
                                         key: ValueKey('question_today'),
-                                        FFLocalizations.of(context).getText(
+                                        AppLocalizations.of(context).getText(
                                           '2nmgg778' /*  */,
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: AppTheme.of(context)
                                             .displaySmall
                                             .override(
                                               fontFamily: 'Urbanist',
@@ -445,15 +445,15 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           10.0, 10.0, 30.0, 0.0),
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
+                                        AppLocalizations.of(context).getText(
                                           'fvy989t6' /* Today's Question */,
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: AppTheme.of(context)
                                             .displaySmall
                                             .override(
                                               fontFamily: 'Urbanist',
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  AppTheme.of(context)
                                                       .primaryText,
                                               fontSize: 28.0,
                                               letterSpacing: 0.0,
@@ -478,7 +478,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                               "yMd",
                                               getCurrentTimestamp,
                                               locale:
-                                                  FFLocalizations.of(context)
+                                                  AppLocalizations.of(context)
                                                       .languageCode,
                                             ),
                                           ),
@@ -495,7 +495,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                   valueColor:
                                                       AlwaysStoppedAnimation<
                                                           Color>(
-                                                    FlutterFlowTheme.of(context)
+                                                    AppTheme.of(context)
                                                         .primary,
                                                   ),
                                                 ),
@@ -520,7 +520,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                   ?.question,
                                               'Not Yet Submitted',
                                             ),
-                                            style: FlutterFlowTheme.of(context)
+                                            style: AppTheme.of(context)
                                                 .displaySmall
                                                 .override(
                                                   fontFamily: 'Urbanist',
@@ -548,7 +548,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        color: AppTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(0.0),
                           bottomRight: Radius.circular(0.0),
@@ -569,10 +569,10 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Text(
-                                      FFLocalizations.of(context).getText(
+                                      AppLocalizations.of(context).getText(
                                         'daud4ybo' /* Quick Actions */,
                                       ),
-                                      style: FlutterFlowTheme.of(context)
+                                      style: AppTheme.of(context)
                                           .bodySmall
                                           .override(
                                             fontFamily: 'Manrope',
@@ -599,7 +599,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                 0.4,
                                         height: 100.0,
                                         decoration: BoxDecoration(
-                                          color: FlutterFlowTheme.of(context)
+                                          color: AppTheme.of(context)
                                               .primaryBackground,
                                           borderRadius:
                                               BorderRadius.circular(8.0),
@@ -637,7 +637,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                               children: [
                                                 Icon(
                                                   Icons.subject,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: AppTheme.of(
                                                           context)
                                                       .primaryText,
                                                   size: 40.0,
@@ -647,11 +647,11 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                       .fromSTEB(
                                                           0.0, 8.0, 0.0, 0.0),
                                                   child: Text(
-                                                    FFLocalizations.of(context)
+                                                    AppLocalizations.of(context)
                                                         .getText(
                                                       'sa0unbls' /* Submit Answer */,
                                                     ),
-                                                    style: FlutterFlowTheme.of(
+                                                    style: AppTheme.of(
                                                             context)
                                                         .bodyMedium
                                                         .override(
@@ -675,7 +675,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                 0.4,
                                         height: 100.0,
                                         decoration: BoxDecoration(
-                                          color: FlutterFlowTheme.of(context)
+                                          color: AppTheme.of(context)
                                               .primaryBackground,
                                           borderRadius:
                                               BorderRadius.circular(8.0),
@@ -701,7 +701,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                               children: [
                                                 Icon(
                                                   Icons.subject,
-                                                  color: FlutterFlowTheme.of(
+                                                  color: AppTheme.of(
                                                           context)
                                                       .primaryText,
                                                   size: 40.0,
@@ -711,11 +711,11 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                       .fromSTEB(
                                                           0.0, 8.0, 0.0, 0.0),
                                                   child: Text(
-                                                    FFLocalizations.of(context)
+                                                    AppLocalizations.of(context)
                                                         .getText(
                                                       'r9p1qa57' /* Submit Question */,
                                                     ),
-                                                    style: FlutterFlowTheme.of(
+                                                    style: AppTheme.of(
                                                             context)
                                                         .bodyMedium
                                                         .override(
@@ -747,7 +747,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: 500.0,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        color: AppTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(0.0),
                           bottomRight: Radius.circular(0.0),
@@ -769,10 +769,10 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        FFLocalizations.of(context).getText(
+                                        AppLocalizations.of(context).getText(
                                           '4mg8qha0' /* Previous Questions */,
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: AppTheme.of(context)
                                             .bodySmall
                                             .override(
                                               fontFamily: 'Manrope',
@@ -786,7 +786,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                   child: Container(
                                     width: 340.7,
                                     decoration: BoxDecoration(
-                                      color: FlutterFlowTheme.of(context)
+                                      color: AppTheme.of(context)
                                           .secondaryBackground,
                                       borderRadius: BorderRadius.circular(0.0),
                                     ),
@@ -807,7 +807,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                 valueColor:
                                                     AlwaysStoppedAnimation<
                                                         Color>(
-                                                  FlutterFlowTheme.of(context)
+                                                  AppTheme.of(context)
                                                       .primary,
                                                 ),
                                               ),
@@ -853,7 +853,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                           0.92,
                                                   height: 70.0,
                                                   decoration: BoxDecoration(
-                                                    color: FlutterFlowTheme.of(
+                                                    color: AppTheme.of(
                                                             context)
                                                         .secondaryBackground,
                                                     borderRadius:
@@ -893,7 +893,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                                     0.0),
                                                           ),
                                                           child: Image.network(
-                                                            FFAppConstants
+                                                            AppConstants
                                                                 .noProfilePic,
                                                             width: 43.5,
                                                             height: 130.6,
@@ -928,13 +928,13 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                                       .question,
                                                                   'Question',
                                                                 ),
-                                                                style: FlutterFlowTheme.of(
+                                                                style: AppTheme.of(
                                                                         context)
                                                                     .titleMedium
                                                                     .override(
                                                                       fontFamily:
                                                                           'Manrope',
-                                                                      color: FlutterFlowTheme.of(
+                                                                      color: AppTheme.of(
                                                                               context)
                                                                           .primaryText,
                                                                       letterSpacing:
@@ -977,7 +977,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                                 textAlign:
                                                                     TextAlign
                                                                         .end,
-                                                                style: FlutterFlowTheme.of(
+                                                                style: AppTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .override(

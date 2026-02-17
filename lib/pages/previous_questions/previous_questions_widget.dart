@@ -1,8 +1,8 @@
 import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '/app/app_icon_button.dart';
+import '/app/app_theme.dart';
+import '/app/app_utils.dart';
+import '/app/app_widgets.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -43,9 +43,9 @@ class _PreviousQuestionsWidgetState extends State<PreviousQuestionsWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      backgroundColor: AppTheme.of(context).primaryBackground,
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).primary,
+        backgroundColor: AppTheme.of(context).primary,
         automaticallyImplyLeading: false,
         leading: InkWell(
           splashColor: Colors.transparent,
@@ -57,15 +57,15 @@ class _PreviousQuestionsWidgetState extends State<PreviousQuestionsWidget> {
           },
           child: Icon(
             Icons.chevron_left_rounded,
-            color: FlutterFlowTheme.of(context).textColor,
+            color: AppTheme.of(context).textColor,
             size: 32.0,
           ),
         ),
         title: Text(
-          FFLocalizations.of(context).getText(
+          AppLocalizations.of(context).getText(
             'j0yzgf4n' /* Question Details */,
           ),
-          style: FlutterFlowTheme.of(context).titleSmall.override(
+          style: AppTheme.of(context).titleSmall.override(
                 fontFamily: 'Manrope',
                 letterSpacing: 0.0,
               ),
@@ -73,13 +73,13 @@ class _PreviousQuestionsWidgetState extends State<PreviousQuestionsWidget> {
         actions: [
           Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
-            child: FlutterFlowIconButton(
+            child: AppIconButton(
               borderColor: Colors.transparent,
               borderRadius: 30.0,
               buttonSize: 46.0,
               icon: Icon(
                 Icons.edit_outlined,
-                color: FlutterFlowTheme.of(context).textColor,
+                color: AppTheme.of(context).textColor,
                 size: 25.0,
               ),
               onPressed: () {
@@ -97,7 +97,7 @@ class _PreviousQuestionsWidgetState extends State<PreviousQuestionsWidget> {
           Container(
             width: double.infinity,
             decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).primary,
+              color: AppTheme.of(context).primary,
             ),
             child: Column(
               mainAxisSize: MainAxisSize.max,
@@ -109,14 +109,14 @@ class _PreviousQuestionsWidgetState extends State<PreviousQuestionsWidget> {
                     children: [
                       Expanded(
                         child: Text(
-                          FFLocalizations.of(context).getText(
+                          AppLocalizations.of(context).getText(
                             'zv72ekdw' /* Amount */,
                           ),
-                          style: FlutterFlowTheme.of(context)
+                          style: AppTheme.of(context)
                               .bodyMedium
                               .override(
                                 fontFamily: 'Manrope',
-                                color: FlutterFlowTheme.of(context).textColor,
+                                color: AppTheme.of(context).textColor,
                                 letterSpacing: 0.0,
                               ),
                         ),
@@ -132,14 +132,14 @@ class _PreviousQuestionsWidgetState extends State<PreviousQuestionsWidget> {
                     children: [
                       Expanded(
                         child: Text(
-                          FFLocalizations.of(context).getText(
+                          AppLocalizations.of(context).getText(
                             '5yks2usp' /*  */,
                           ),
-                          style: FlutterFlowTheme.of(context)
+                          style: AppTheme.of(context)
                               .headlineMedium
                               .override(
                                 fontFamily: 'Urbanist',
-                                color: FlutterFlowTheme.of(context).textColor,
+                                color: AppTheme.of(context).textColor,
                                 fontSize: 36.0,
                                 letterSpacing: 0.0,
                               ),
@@ -158,10 +158,10 @@ class _PreviousQuestionsWidgetState extends State<PreviousQuestionsWidget> {
               children: [
                 Expanded(
                   child: Text(
-                    FFLocalizations.of(context).getText(
+                    AppLocalizations.of(context).getText(
                       '0rjyjwed' /* Question */,
                     ),
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    style: AppTheme.of(context).bodyMedium.override(
                           fontFamily: 'Manrope',
                           letterSpacing: 0.0,
                         ),
@@ -177,10 +177,10 @@ class _PreviousQuestionsWidgetState extends State<PreviousQuestionsWidget> {
               children: [
                 Expanded(
                   child: Text(
-                    FFLocalizations.of(context).getText(
+                    AppLocalizations.of(context).getText(
                       'i1s9668v' /*  */,
                     ),
-                    style: FlutterFlowTheme.of(context).headlineSmall.override(
+                    style: AppTheme.of(context).headlineSmall.override(
                           fontFamily: 'Urbanist',
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w500,
@@ -197,10 +197,10 @@ class _PreviousQuestionsWidgetState extends State<PreviousQuestionsWidget> {
               children: [
                 Expanded(
                   child: Text(
-                    FFLocalizations.of(context).getText(
+                    AppLocalizations.of(context).getText(
                       'eeyn6dk2' /* When */,
                     ),
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    style: AppTheme.of(context).bodyMedium.override(
                           fontFamily: 'Manrope',
                           letterSpacing: 0.0,
                         ),
@@ -215,10 +215,10 @@ class _PreviousQuestionsWidgetState extends State<PreviousQuestionsWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Text(
-                  FFLocalizations.of(context).getText(
+                  AppLocalizations.of(context).getText(
                     'w8ud9b3f' /*  */,
                   ),
-                  style: FlutterFlowTheme.of(context).bodySmall.override(
+                  style: AppTheme.of(context).bodySmall.override(
                         fontFamily: 'Manrope',
                         letterSpacing: 0.0,
                       ),
@@ -236,10 +236,10 @@ class _PreviousQuestionsWidgetState extends State<PreviousQuestionsWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                     child: Text(
-                      FFLocalizations.of(context).getText(
+                      AppLocalizations.of(context).getText(
                         'lccxx6eu' /* Category */,
                       ),
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      style: AppTheme.of(context).bodyMedium.override(
                             fontFamily: 'Manrope',
                             letterSpacing: 0.0,
                           ),
@@ -256,10 +256,10 @@ class _PreviousQuestionsWidgetState extends State<PreviousQuestionsWidget> {
               children: [
                 Expanded(
                   child: Text(
-                    FFLocalizations.of(context).getText(
+                    AppLocalizations.of(context).getText(
                       'hoftu4iw' /*  */,
                     ),
-                    style: FlutterFlowTheme.of(context).bodySmall.override(
+                    style: AppTheme.of(context).bodySmall.override(
                           fontFamily: 'Manrope',
                           letterSpacing: 0.0,
                         ),
@@ -275,10 +275,10 @@ class _PreviousQuestionsWidgetState extends State<PreviousQuestionsWidget> {
               children: [
                 Expanded(
                   child: Text(
-                    FFLocalizations.of(context).getText(
+                    AppLocalizations.of(context).getText(
                       'jzyax4hn' /* Submitted By */,
                     ),
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    style: AppTheme.of(context).bodyMedium.override(
                           fontFamily: 'Manrope',
                           letterSpacing: 0.0,
                         ),
@@ -302,7 +302,7 @@ class _PreviousQuestionsWidgetState extends State<PreviousQuestionsWidget> {
                     width: MediaQuery.sizeOf(context).width * 0.9,
                     height: 60.0,
                     decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                      color: AppTheme.of(context).secondaryBackground,
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     child: Padding(
@@ -313,7 +313,7 @@ class _PreviousQuestionsWidgetState extends State<PreviousQuestionsWidget> {
                         children: [
                           Card(
                             clipBehavior: Clip.antiAliasWithSaveLayer,
-                            color: FlutterFlowTheme.of(context).primary,
+                            color: AppTheme.of(context).primary,
                             elevation: 2.0,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(40.0),
@@ -334,7 +334,7 @@ class _PreviousQuestionsWidgetState extends State<PreviousQuestionsWidget> {
                                         child: CircularProgressIndicator(
                                           valueColor:
                                               AlwaysStoppedAnimation<Color>(
-                                            FlutterFlowTheme.of(context)
+                                            AppTheme.of(context)
                                                 .primary,
                                           ),
                                         ),
@@ -392,7 +392,7 @@ class _PreviousQuestionsWidgetState extends State<PreviousQuestionsWidget> {
                                                 valueColor:
                                                     AlwaysStoppedAnimation<
                                                         Color>(
-                                                  FlutterFlowTheme.of(context)
+                                                  AppTheme.of(context)
                                                       .primary,
                                                 ),
                                               ),
@@ -411,10 +411,10 @@ class _PreviousQuestionsWidgetState extends State<PreviousQuestionsWidget> {
                                                 : null;
 
                                         return Text(
-                                          FFLocalizations.of(context).getText(
+                                          AppLocalizations.of(context).getText(
                                             '7ad0fa2b' /*  */,
                                           ),
-                                          style: FlutterFlowTheme.of(context)
+                                          style: AppTheme.of(context)
                                               .headlineSmall
                                               .override(
                                                 fontFamily: 'Urbanist',
@@ -426,14 +426,14 @@ class _PreviousQuestionsWidgetState extends State<PreviousQuestionsWidget> {
                                   ],
                                 ),
                                 Text(
-                                  FFLocalizations.of(context).getText(
+                                  AppLocalizations.of(context).getText(
                                     'hps85dvd' /* user.name@domainname.com */,
                                   ),
-                                  style: FlutterFlowTheme.of(context)
+                                  style: AppTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Manrope',
-                                        color: FlutterFlowTheme.of(context)
+                                        color: AppTheme.of(context)
                                             .primary,
                                         letterSpacing: 0.0,
                                       ),

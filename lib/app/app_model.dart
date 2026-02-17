@@ -2,9 +2,9 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:provider/provider.dart';
-import 'flutter_flow_util.dart';
+import 'app_utils.dart';
 
-Widget wrapWithModel<T extends FlutterFlowModel>({
+Widget wrapWithModel<T extends AppModel>({
   required T model,
   required Widget child,
   required VoidCallback updateCallback,
@@ -26,7 +26,7 @@ Widget wrapWithModel<T extends FlutterFlowModel>({
   );
 }
 
-T createModel<T extends FlutterFlowModel>(
+T createModel<T extends AppModel>(
   BuildContext context,
   T Function() defaultBuilder,
 ) {
@@ -35,7 +35,7 @@ T createModel<T extends FlutterFlowModel>(
   return model;
 }
 
-abstract class FlutterFlowModel<W extends Widget> {
+abstract class AppModel<W extends Widget> {
   // Initialization methods
   bool _isInitialized = false;
   void initState(BuildContext context);
@@ -76,7 +76,7 @@ abstract class FlutterFlowModel<W extends Widget> {
   // Function to call when the model receives an update.
   VoidCallback _updateCallback = () {};
   void onUpdate() => updateOnChange ? _updateCallback() : () {};
-  FlutterFlowModel setOnUpdate({
+  AppModel setOnUpdate({
     bool updateOnChange = false,
     required VoidCallback onUpdate,
   }) =>
@@ -90,8 +90,8 @@ abstract class FlutterFlowModel<W extends Widget> {
   }
 }
 
-class FlutterFlowDynamicModels<T extends FlutterFlowModel> {
-  FlutterFlowDynamicModels(this.defaultBuilder);
+class AppDynamicModels<T extends AppModel> {
+  AppDynamicModels(this.defaultBuilder);
 
   final T Function() defaultBuilder;
   final Map<String, T> _childrenModels = {};

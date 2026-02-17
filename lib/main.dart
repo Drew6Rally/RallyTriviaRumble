@@ -10,12 +10,12 @@ import 'auth/firebase_auth/auth_util.dart';
 
 import '/backend/supabase/supabase.dart';
 import 'backend/firebase/firebase_config.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import 'flutter_flow/flutter_flow_util.dart';
-import 'flutter_flow/internationalization.dart';
+import '/app/app_theme.dart';
+import 'app/app_utils.dart';
+import 'app/internationalization.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'flutter_flow/nav/nav.dart';
+import 'app/nav/nav.dart';
 import 'index.dart';
 
 void main() async {
@@ -33,14 +33,10 @@ class AppBootstrap extends StatefulWidget {
   State<AppBootstrap> createState() => _AppBootstrapState();
 }
 
-class _AppBootstrapState extends State<AppBootstrap> {
-  late final Future<FFAppState> _initialization;
+  await AppTheme.initialize();
 
-  @override
-  void initState() {
-    super.initState();
-    _initialization = _initializeDependencies();
-  }
+  final appState = AppState(); // Initialize AppState
+  await appState.initializePersistedState();
 
   Future<FFAppState> _initializeDependencies() async {
     await initFirebase();
@@ -128,7 +124,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   Locale? _locale;
 
-  ThemeMode _themeMode = FlutterFlowTheme.themeMode;
+  ThemeMode _themeMode = AppTheme.themeMode;
 
   late AppStateNotifier _appStateNotifier;
   late GoRouter _router;
@@ -180,7 +176,7 @@ class _MyAppState extends State<MyApp> {
 
   void setThemeMode(ThemeMode mode) => safeSetState(() {
         _themeMode = mode;
-        FlutterFlowTheme.saveThemeMode(mode);
+        AppTheme.saveThemeMode(mode);
       });
 
   @override
@@ -189,7 +185,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Rally Trivia Rumble',
       localizationsDelegates: [
-        FFLocalizationsDelegate(),
+        AppLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
@@ -255,9 +251,9 @@ class _NavBarPageState extends State<NavBarPage> {
           _currentPage = null;
           _currentPageName = tabs.keys.toList()[i];
         }),
-        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
-        selectedItemColor: FlutterFlowTheme.of(context).primary,
-        unselectedItemColor: FlutterFlowTheme.of(context).secondaryText,
+        backgroundColor: AppTheme.of(context).secondaryBackground,
+        selectedItemColor: AppTheme.of(context).primary,
+        unselectedItemColor: AppTheme.of(context).secondaryText,
         showSelectedLabels: true,
         showUnselectedLabels: false,
         type: BottomNavigationBarType.fixed,
@@ -267,7 +263,7 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.home_sharp,
               size: 24.0,
             ),
-            label: FFLocalizations.of(context).getText(
+            label: AppLocalizations.of(context).getText(
               'm8rhanhc' /* Home */,
             ),
             tooltip: '',
@@ -281,7 +277,7 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.account_circle_rounded,
               size: 24.0,
             ),
-            label: FFLocalizations.of(context).getText(
+            label: AppLocalizations.of(context).getText(
               '8srr2k0j' /* Account */,
             ),
             tooltip: '',

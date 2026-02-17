@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
-import 'flutter_flow/request_manager.dart';
+import 'app/request_manager.dart';
 import '/backend/backend.dart';
 import '/backend/schema/structs/index.dart';
 import '/backend/schema/enums/enums.dart';
 import 'backend/supabase/supabase.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'flutter_flow/flutter_flow_util.dart';
+import 'app/app_utils.dart';
 
-class FFAppState extends ChangeNotifier {
-  static FFAppState _instance = FFAppState._internal();
+class AppState extends ChangeNotifier {
+  static AppState _instance = AppState._internal();
 
-  factory FFAppState() {
+  factory AppState() {
     return _instance;
   }
 
-  FFAppState._internal();
+  AppState._internal();
 
   static void reset() {
-    _instance = FFAppState._internal();
+    _instance = AppState._internal();
   }
 
   Future initializePersistedState() async {}
