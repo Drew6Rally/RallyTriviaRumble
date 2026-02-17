@@ -9,7 +9,7 @@ import '/backend/schema/enums/enums.dart';
 import 'index.dart';
 import '/app/app_utils.dart';
 
-class QuestionStruct extends FFFirebaseStruct {
+class QuestionStruct extends FirebaseStruct {
   QuestionStruct({
     Categories? category,
     DateTime? submittedDate,

@@ -13,7 +13,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 
-class ProfilepageModel extends FlutterFlowModel<ProfilepageWidget> {
+class ProfilepageModel extends AppModel<ProfilepageWidget> {
   @override
   void initState(BuildContext context) {}
 

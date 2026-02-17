@@ -8,7 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class NotificationsSettingsModel
-    extends FlutterFlowModel<NotificationsSettingsWidget> {
+    extends AppModel<NotificationsSettingsWidget> {
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for SwitchListTile widget.

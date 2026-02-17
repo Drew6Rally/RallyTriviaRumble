@@ -193,7 +193,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {
           _model.yourDisplayNameTextController?.text =
-              FFLocalizations.of(context).getText(
+              AppLocalizations.of(context).getText(
             'ftcc4kfo' /* i.e. Drew6Smith */,
           );
         }));
@@ -210,15 +210,15 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      backgroundColor: AppTheme.of(context).primaryBackground,
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: AppTheme.of(context).primaryBackground,
         automaticallyImplyLeading: false,
         title: Text(
-          FFLocalizations.of(context).getText(
+          AppLocalizations.of(context).getText(
             'yhcaf7r2' /* Complete Profile */,
           ),
-          style: FlutterFlowTheme.of(context).headlineSmall.override(
+          style: AppTheme.of(context).headlineSmall.override(
                 fontFamily: 'Urbanist',
                 letterSpacing: 0.0,
               ),
@@ -260,7 +260,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                             height: 50.0,
                             child: CircularProgressIndicator(
                               valueColor: AlwaysStoppedAnimation<Color>(
-                                FlutterFlowTheme.of(context).primary,
+                                AppTheme.of(context).primary,
                               ),
                             ),
                           ),
@@ -285,12 +285,12 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                               selectedMedia.every((m) =>
                                   validateFileFormat(m.storagePath, context))) {
                             safeSetState(() => _model.isDataUploading = true);
-                            var selectedUploadedFiles = <FFUploadedFile>[];
+                            var selectedUploadedFiles = <AppUploadedFile>[];
 
                             var downloadUrls = <String>[];
                             try {
                               selectedUploadedFiles = selectedMedia
-                                  .map((m) => FFUploadedFile(
+                                  .map((m) => AppUploadedFile(
                                         name: m.storagePath.split('/').last,
                                         bytes: m.bytes,
                                         height: m.dimensions?.height,
@@ -340,10 +340,10 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                   ),
                 ),
                 Text(
-                  FFLocalizations.of(context).getText(
+                  AppLocalizations.of(context).getText(
                     'r6npjsue' /* Upload a photo for your profil... */,
                   ),
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  style: AppTheme.of(context).bodyMedium.override(
                         fontFamily: 'Manrope',
                         letterSpacing: 0.0,
                       ),
@@ -356,16 +356,16 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                     focusNode: _model.yourNameFocusNode,
                     obscureText: false,
                     decoration: InputDecoration(
-                      labelText: FFLocalizations.of(context).getText(
+                      labelText: AppLocalizations.of(context).getText(
                         'sdptn7dd' /* Your Name */,
                       ),
                       labelStyle:
-                          FlutterFlowTheme.of(context).bodySmall.override(
+                          AppTheme.of(context).bodySmall.override(
                                 fontFamily: 'Manrope',
                                 letterSpacing: 0.0,
                               ),
                       hintStyle:
-                          FlutterFlowTheme.of(context).bodySmall.override(
+                          AppTheme.of(context).bodySmall.override(
                                 fontFamily: 'Manrope',
                                 letterSpacing: 0.0,
                               ),
@@ -399,11 +399,11 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                       ),
                       filled: true,
                       fillColor:
-                          FlutterFlowTheme.of(context).secondaryBackground,
+                          AppTheme.of(context).secondaryBackground,
                       contentPadding: EdgeInsetsDirectional.fromSTEB(
                           20.0, 24.0, 20.0, 24.0),
                     ),
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    style: AppTheme.of(context).bodyMedium.override(
                           fontFamily: 'Manrope',
                           letterSpacing: 0.0,
                         ),
@@ -420,19 +420,19 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                     focusNode: _model.yourDisplayNameFocusNode,
                     obscureText: false,
                     decoration: InputDecoration(
-                      labelText: FFLocalizations.of(context).getText(
+                      labelText: AppLocalizations.of(context).getText(
                         'n636qnrx' /* Your Display Name */,
                       ),
                       labelStyle:
-                          FlutterFlowTheme.of(context).bodySmall.override(
+                          AppTheme.of(context).bodySmall.override(
                                 fontFamily: 'Manrope',
                                 letterSpacing: 0.0,
                               ),
-                      hintText: FFLocalizations.of(context).getText(
+                      hintText: AppLocalizations.of(context).getText(
                         's7yvjzbs' /* i.e. 34 */,
                       ),
                       hintStyle:
-                          FlutterFlowTheme.of(context).bodySmall.override(
+                          AppTheme.of(context).bodySmall.override(
                                 fontFamily: 'Manrope',
                                 letterSpacing: 0.0,
                               ),
@@ -466,11 +466,11 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                       ),
                       filled: true,
                       fillColor:
-                          FlutterFlowTheme.of(context).secondaryBackground,
+                          AppTheme.of(context).secondaryBackground,
                       contentPadding: EdgeInsetsDirectional.fromSTEB(
                           20.0, 24.0, 20.0, 24.0),
                     ),
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    style: AppTheme.of(context).bodyMedium.override(
                           fontFamily: 'Manrope',
                           letterSpacing: 0.0,
                         ),
@@ -493,7 +493,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                             height: 50.0,
                             child: CircularProgressIndicator(
                               valueColor: AlwaysStoppedAnimation<Color>(
-                                FlutterFlowTheme.of(context).primary,
+                                AppTheme.of(context).primary,
                               ),
                             ),
                           ),
@@ -502,7 +502,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
 
                       final buttonLoginUsersRecord = snapshot.data!;
 
-                      return FFButtonWidget(
+                      return AppButton(
                         onPressed: () async {
                           await widget!.userReference!
                               .update(createUsersRecordData(
@@ -515,22 +515,22 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
 
                           context.pushNamed(HomeWidget.routeName);
                         },
-                        text: FFLocalizations.of(context).getText(
+                        text: AppLocalizations.of(context).getText(
                           'hbhd3bdt' /* Complete Profile */,
                         ),
-                        options: FFButtonOptions(
+                        options: AppButtonOptions(
                           width: 230.0,
                           height: 50.0,
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: FlutterFlowTheme.of(context).primary,
-                          textStyle: FlutterFlowTheme.of(context)
+                          color: AppTheme.of(context).primary,
+                          textStyle: AppTheme.of(context)
                               .titleSmall
                               .override(
                                 fontFamily: 'Manrope',
-                                color: FlutterFlowTheme.of(context).primaryText,
+                                color: AppTheme.of(context).primaryText,
                                 letterSpacing: 0.0,
                               ),
                           elevation: 3.0,

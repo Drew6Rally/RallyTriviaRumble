@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class MYProfilePageModel extends FlutterFlowModel<MYProfilePageWidget> {
+class MYProfilePageModel extends AppModel<MYProfilePageWidget> {
   @override
   void initState(BuildContext context) {}
 

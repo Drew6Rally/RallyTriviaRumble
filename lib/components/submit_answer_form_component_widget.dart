@@ -50,7 +50,7 @@ class _SubmitAnswerFormComponentWidgetState
       },
     );
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {
-          _model.textController?.text = FFLocalizations.of(context).getText(
+          _model.textController?.text = AppLocalizations.of(context).getText(
             '3wuv9tnz' /* Enter Answer Here... */,
           );
         }));
@@ -65,7 +65,7 @@ class _SubmitAnswerFormComponentWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<AppState>();
 
     return Stack(
       children: [
@@ -89,7 +89,7 @@ class _SubmitAnswerFormComponentWidgetState
                 ],
                 gradient: LinearGradient(
                   colors: [
-                    FlutterFlowTheme.of(context).primaryBackground,
+                    AppTheme.of(context).primaryBackground,
                     Color(0x3AF2A384)
                   ],
                   stops: [0.0, 1.0],
@@ -118,20 +118,20 @@ class _SubmitAnswerFormComponentWidgetState
                               alignment: AlignmentDirectional(1.0, 0.0),
                               child: Card(
                                 clipBehavior: Clip.antiAliasWithSaveLayer,
-                                color: FlutterFlowTheme.of(context)
+                                color: AppTheme.of(context)
                                     .primaryBackground,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30.0),
                                 ),
                                 child: Align(
                                   alignment: AlignmentDirectional(1.0, 0.0),
-                                  child: FlutterFlowIconButton(
+                                  child: AppIconButton(
                                     borderColor: Colors.transparent,
                                     borderRadius: 30.0,
                                     buttonSize: 48.0,
                                     icon: Icon(
                                       Icons.close_rounded,
-                                      color: FlutterFlowTheme.of(context)
+                                      color: AppTheme.of(context)
                                           .secondaryText,
                                       size: 25.0,
                                     ),
@@ -165,16 +165,16 @@ class _SubmitAnswerFormComponentWidgetState
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   isDense: true,
-                                  labelStyle: FlutterFlowTheme.of(context)
+                                  labelStyle: AppTheme.of(context)
                                       .labelMedium
                                       .override(
                                         fontFamily: 'Manrope',
                                         letterSpacing: 0.0,
                                       ),
-                                  hintText: FFLocalizations.of(context).getText(
+                                  hintText: AppLocalizations.of(context).getText(
                                     '3rxm2jh4' /* TextField */,
                                   ),
-                                  hintStyle: FlutterFlowTheme.of(context)
+                                  hintStyle: AppTheme.of(context)
                                       .labelMedium
                                       .override(
                                         fontFamily: 'Manrope',
@@ -196,32 +196,32 @@ class _SubmitAnswerFormComponentWidgetState
                                   ),
                                   errorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
-                                      color: FlutterFlowTheme.of(context).error,
+                                      color: AppTheme.of(context).error,
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   focusedErrorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
-                                      color: FlutterFlowTheme.of(context).error,
+                                      color: AppTheme.of(context).error,
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   filled: true,
-                                  fillColor: FlutterFlowTheme.of(context)
+                                  fillColor: AppTheme.of(context)
                                       .secondaryBackground,
                                 ),
-                                style: FlutterFlowTheme.of(context)
+                                style: AppTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Manrope',
-                                      color: FlutterFlowTheme.of(context)
+                                      color: AppTheme.of(context)
                                           .secondaryText,
                                       letterSpacing: 0.0,
                                     ),
                                 cursorColor:
-                                    FlutterFlowTheme.of(context).primaryText,
+                                    AppTheme.of(context).primaryText,
                                 validator: _model.textControllerValidator
                                     .asValidator(context),
                               ),
@@ -241,10 +241,10 @@ class _SubmitAnswerFormComponentWidgetState
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 50.0, 0.0, 0.0),
                           child: Text(
-                            FFLocalizations.of(context).getText(
+                            AppLocalizations.of(context).getText(
                               '95a8lg9f' /* Submit Your Response */,
                             ),
-                            style: FlutterFlowTheme.of(context)
+                            style: AppTheme.of(context)
                                 .displayMedium
                                 .override(
                                   fontFamily: 'Urbanist',
@@ -264,13 +264,13 @@ class _SubmitAnswerFormComponentWidgetState
                                   dateTimeFormat(
                                     "yMd",
                                     getCurrentTimestamp,
-                                    locale: FFLocalizations.of(context)
+                                    locale: AppLocalizations.of(context)
                                         .languageCode,
                                   ),
                                   '9/15/1999',
                                 ),
                                 textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context)
+                                style: AppTheme.of(context)
                                     .displaySmall
                                     .override(
                                       fontFamily: 'Urbanist',
@@ -299,15 +299,15 @@ class _SubmitAnswerFormComponentWidgetState
             children: [
               Opacity(
                 opacity: 0.8,
-                child: FFButtonWidget(
+                child: AppButton(
                   onPressed: () async {
                     await PlayerAnswerSubmissionsTable().insert({
                       'Timestamp': dateTimeFormat(
                         "yMd",
                         getCurrentTimestamp,
-                        locale: FFLocalizations.of(context).languageCode,
+                        locale: AppLocalizations.of(context).languageCode,
                       ),
-                      'Player Name': FFAppState().currentUserDisplayName,
+                      'Player Name': AppState().currentUserDisplayName,
                       'Final Answer:': _model.textController.text,
                     });
 
@@ -322,10 +322,10 @@ class _SubmitAnswerFormComponentWidgetState
                       },
                     );
                   },
-                  text: FFLocalizations.of(context).getText(
+                  text: AppLocalizations.of(context).getText(
                     'r64mlpgk' /* Confirm */,
                   ),
-                  options: FFButtonOptions(
+                  options: AppButtonOptions(
                     width: 166.1,
                     height: 38.51,
                     padding:
@@ -333,18 +333,18 @@ class _SubmitAnswerFormComponentWidgetState
                     iconAlignment: IconAlignment.start,
                     iconPadding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                    color: AppTheme.of(context).secondaryBackground,
                     textStyle:
-                        FlutterFlowTheme.of(context).displayLarge.override(
+                        AppTheme.of(context).displayLarge.override(
                               fontFamily: 'Urbanist',
-                              color: FlutterFlowTheme.of(context).primaryText,
+                              color: AppTheme.of(context).primaryText,
                               fontSize: 32.0,
                               letterSpacing: 0.0,
                               lineHeight: 1.1,
                             ),
                     elevation: 0.0,
                     borderSide: BorderSide(
-                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                      color: AppTheme.of(context).secondaryBackground,
                     ),
                     borderRadius: BorderRadius.circular(50.0),
                   ),

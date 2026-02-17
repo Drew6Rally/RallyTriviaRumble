@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class LoginPageModel extends FlutterFlowModel<LoginPageWidget> {
+class LoginPageModel extends AppModel<LoginPageWidget> {
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for userName-login widget.

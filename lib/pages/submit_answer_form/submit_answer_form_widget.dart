@@ -115,7 +115,7 @@ class _SubmitAnswerFormWidgetState extends State<SubmitAnswerFormWidget>
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: AppTheme.of(context).primaryBackground,
         body: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -135,7 +135,7 @@ class _SubmitAnswerFormWidgetState extends State<SubmitAnswerFormWidget>
                 width: MediaQuery.sizeOf(context).width * 1.0,
                 height: MediaQuery.sizeOf(context).height * 0.996,
                 decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                  color: AppTheme.of(context).secondaryBackground,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(16.0),
                     bottomRight: Radius.circular(16.0),
@@ -154,10 +154,10 @@ class _SubmitAnswerFormWidgetState extends State<SubmitAnswerFormWidget>
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            FFLocalizations.of(context).getText(
+                            AppLocalizations.of(context).getText(
                               'pe3o18oh' /* Submit Answer */,
                             ),
-                            style: FlutterFlowTheme.of(context)
+                            style: AppTheme.of(context)
                                 .displaySmall
                                 .override(
                                   fontFamily: 'Urbanist',
@@ -167,18 +167,18 @@ class _SubmitAnswerFormWidgetState extends State<SubmitAnswerFormWidget>
                           Card(
                             clipBehavior: Clip.antiAliasWithSaveLayer,
                             color:
-                                FlutterFlowTheme.of(context).primaryBackground,
+                                AppTheme.of(context).primaryBackground,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30.0),
                             ),
-                            child: FlutterFlowIconButton(
+                            child: AppIconButton(
                               borderColor: Colors.transparent,
                               borderRadius: 30.0,
                               buttonSize: 48.0,
                               icon: Icon(
                                 Icons.close_rounded,
                                 color:
-                                    FlutterFlowTheme.of(context).secondaryText,
+                                    AppTheme.of(context).secondaryText,
                                 size: 25.0,
                               ),
                               onPressed: () async {
@@ -201,11 +201,11 @@ class _SubmitAnswerFormWidgetState extends State<SubmitAnswerFormWidget>
                                   "yMd",
                                   getCurrentTimestamp,
                                   locale:
-                                      FFLocalizations.of(context).languageCode,
+                                      AppLocalizations.of(context).languageCode,
                                 ),
                                 'date',
                               ),
-                              style: FlutterFlowTheme.of(context)
+                              style: AppTheme.of(context)
                                   .displaySmall
                                   .override(
                                     fontFamily: 'Urbanist',

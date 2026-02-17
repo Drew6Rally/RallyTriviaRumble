@@ -17,13 +17,13 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class CompleteProfileModel extends FlutterFlowModel<CompleteProfileWidget> {
+class CompleteProfileModel extends AppModel<CompleteProfileWidget> {
   ///  State fields for stateful widgets in this page.
 
   final formKey = GlobalKey<FormState>();
   bool isDataUploading = false;
-  FFUploadedFile uploadedLocalFile =
-      FFUploadedFile(bytes: Uint8List.fromList([]));
+  AppUploadedFile uploadedLocalFile =
+      AppUploadedFile(bytes: Uint8List.fromList([]));
   String uploadedFileUrl = '';
 
   // State field(s) for yourName widget.
@@ -32,7 +32,7 @@ class CompleteProfileModel extends FlutterFlowModel<CompleteProfileWidget> {
   String? Function(BuildContext, String?)? yourNameTextControllerValidator;
   String? _yourNameTextControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
+      return AppLocalizations.of(context).getText(
         '1eac148w' /* Field is required */,
       );
     }
@@ -48,7 +48,7 @@ class CompleteProfileModel extends FlutterFlowModel<CompleteProfileWidget> {
   String? _yourDisplayNameTextControllerValidator(
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
+      return AppLocalizations.of(context).getText(
         'ew7dbn3s' /* Field is required */,
       );
     }

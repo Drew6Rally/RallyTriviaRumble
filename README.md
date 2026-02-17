@@ -1,6 +1,6 @@
 # Rally Trivia Rumble
 
-This repository now runs as a standard Flutter project maintained in VS Code (no FlutterFlow export workflow required).
+This repository runs as a standard Flutter project maintained in VS Code, with no dependency on external visual builders.
 
 ## Prerequisites
 

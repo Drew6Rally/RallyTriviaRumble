@@ -116,7 +116,7 @@ class _SubmitQuestionFormWidgetState extends State<SubmitQuestionFormWidget>
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: AppTheme.of(context).primaryBackground,
         body: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -136,7 +136,7 @@ class _SubmitQuestionFormWidgetState extends State<SubmitQuestionFormWidget>
                 width: MediaQuery.sizeOf(context).width * 1.0,
                 height: MediaQuery.sizeOf(context).height * 0.996,
                 decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                  color: AppTheme.of(context).secondaryBackground,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(16.0),
                     bottomRight: Radius.circular(16.0),
@@ -160,20 +160,20 @@ class _SubmitQuestionFormWidgetState extends State<SubmitQuestionFormWidget>
                               alignment: AlignmentDirectional(1.0, 0.0),
                               child: Card(
                                 clipBehavior: Clip.antiAliasWithSaveLayer,
-                                color: FlutterFlowTheme.of(context)
+                                color: AppTheme.of(context)
                                     .primaryBackground,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30.0),
                                 ),
                                 child: Align(
                                   alignment: AlignmentDirectional(1.0, 0.0),
-                                  child: FlutterFlowIconButton(
+                                  child: AppIconButton(
                                     borderColor: Colors.transparent,
                                     borderRadius: 30.0,
                                     buttonSize: 48.0,
                                     icon: Icon(
                                       Icons.close_rounded,
-                                      color: FlutterFlowTheme.of(context)
+                                      color: AppTheme.of(context)
                                           .secondaryText,
                                       size: 25.0,
                                     ),

@@ -13,7 +13,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class SubmitAnswerFormModel extends FlutterFlowModel<SubmitAnswerFormWidget> {
+class SubmitAnswerFormModel extends AppModel<SubmitAnswerFormWidget> {
   ///  State fields for stateful widgets in this page.
 
   // Model for submitAnswerFormComponent component.

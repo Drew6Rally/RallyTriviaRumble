@@ -48,7 +48,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      backgroundColor: AppTheme.of(context).primaryBackground,
       body: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -124,10 +124,10 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
-                                    FFLocalizations.of(context).getText(
+                                    AppLocalizations.of(context).getText(
                                       'o07j3mgv' /* Rally Trivia Rumble */,
                                     ),
-                                    style: FlutterFlowTheme.of(context)
+                                    style: AppTheme.of(context)
                                         .displaySmall
                                         .override(
                                           fontFamily: 'Urbanist',
@@ -146,11 +146,11 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Text(
-                                      FFLocalizations.of(context).getText(
+                                      AppLocalizations.of(context).getText(
                                         'fzxvw3mu' /* Login to access your account b... */,
                                       ),
                                       textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(context)
+                                      style: AppTheme.of(context)
                                           .titleMedium
                                           .override(
                                             fontFamily: 'Manrope',
@@ -170,19 +170,19 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelText:
-                                      FFLocalizations.of(context).getText(
+                                      AppLocalizations.of(context).getText(
                                     'a9j78va9' /* Username */,
                                   ),
-                                  labelStyle: FlutterFlowTheme.of(context)
+                                  labelStyle: AppTheme.of(context)
                                       .bodySmall
                                       .override(
                                         fontFamily: 'Manrope',
                                         letterSpacing: 0.0,
                                       ),
-                                  hintText: FFLocalizations.of(context).getText(
+                                  hintText: AppLocalizations.of(context).getText(
                                     'i7f18cve' /* Enter your username... */,
                                   ),
-                                  hintStyle: FlutterFlowTheme.of(context)
+                                  hintStyle: AppTheme.of(context)
                                       .bodySmall
                                       .override(
                                         fontFamily: 'Manrope',
@@ -217,13 +217,13 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   filled: true,
-                                  fillColor: FlutterFlowTheme.of(context)
+                                  fillColor: AppTheme.of(context)
                                       .secondaryBackground,
                                   contentPadding:
                                       EdgeInsetsDirectional.fromSTEB(
                                           20.0, 24.0, 20.0, 24.0),
                                 ),
-                                style: FlutterFlowTheme.of(context)
+                                style: AppTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Manrope',
@@ -243,19 +243,19 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                 obscureText: !_model.passwordLoginVisibility,
                                 decoration: InputDecoration(
                                   labelText:
-                                      FFLocalizations.of(context).getText(
+                                      AppLocalizations.of(context).getText(
                                     'wztjmbn8' /* Password */,
                                   ),
-                                  labelStyle: FlutterFlowTheme.of(context)
+                                  labelStyle: AppTheme.of(context)
                                       .bodySmall
                                       .override(
                                         fontFamily: 'Manrope',
                                         letterSpacing: 0.0,
                                       ),
-                                  hintText: FFLocalizations.of(context).getText(
+                                  hintText: AppLocalizations.of(context).getText(
                                     'lw1jpm1f' /* Enter your password... */,
                                   ),
-                                  hintStyle: FlutterFlowTheme.of(context)
+                                  hintStyle: AppTheme.of(context)
                                       .bodySmall
                                       .override(
                                         fontFamily: 'Manrope',
@@ -290,7 +290,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   filled: true,
-                                  fillColor: FlutterFlowTheme.of(context)
+                                  fillColor: AppTheme.of(context)
                                       .secondaryBackground,
                                   contentPadding:
                                       EdgeInsetsDirectional.fromSTEB(
@@ -310,7 +310,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     ),
                                   ),
                                 ),
-                                style: FlutterFlowTheme.of(context)
+                                style: AppTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Manrope',
@@ -328,15 +328,15 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 24.0, 0.0, 24.0),
-                                  child: FFButtonWidget(
+                                  child: AppButton(
                                     onPressed: () async {
                                       context.pushNamed(
                                           ForgotPasswordWidget.routeName);
                                     },
-                                    text: FFLocalizations.of(context).getText(
+                                    text: AppLocalizations.of(context).getText(
                                       'm2xyjvuf' /* Forgot Password? */,
                                     ),
-                                    options: FFButtonOptions(
+                                    options: AppButtonOptions(
                                       width: 170.0,
                                       height: 40.0,
                                       padding: EdgeInsetsDirectional.fromSTEB(
@@ -345,7 +345,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                           EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color: Color(0x001A1F24),
-                                      textStyle: FlutterFlowTheme.of(context)
+                                      textStyle: AppTheme.of(context)
                                           .bodySmall
                                           .override(
                                             fontFamily: 'Manrope',
@@ -360,7 +360,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     ),
                                   ),
                                 ),
-                                FFButtonWidget(
+                                AppButton(
                                   onPressed: () async {
                                     GoRouter.of(context).prepareAuthEvent();
 
@@ -377,18 +377,18 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     context.pushNamedAuth(
                                         HomeWidget.routeName, context.mounted);
                                   },
-                                  text: FFLocalizations.of(context).getText(
+                                  text: AppLocalizations.of(context).getText(
                                     'qbmoi1av' /* Login */,
                                   ),
-                                  options: FFButtonOptions(
+                                  options: AppButtonOptions(
                                     width: 120.0,
                                     height: 50.0,
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: FlutterFlowTheme.of(context).primary,
-                                    textStyle: FlutterFlowTheme.of(context)
+                                    color: AppTheme.of(context).primary,
+                                    textStyle: AppTheme.of(context)
                                         .titleSmall
                                         .override(
                                           fontFamily: 'Manrope',
@@ -422,7 +422,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                         MediaQuery.sizeOf(context).width * 0.8,
                                     height: 44.0,
                                     decoration: BoxDecoration(
-                                      color: FlutterFlowTheme.of(context)
+                                      color: AppTheme.of(context)
                                           .secondaryBackground,
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
@@ -432,10 +432,10 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                           MainAxisAlignment.center,
                                       children: [
                                         Text(
-                                          FFLocalizations.of(context).getText(
+                                          AppLocalizations.of(context).getText(
                                             'cjqb8ial' /* Don't have an account? */,
                                           ),
-                                          style: FlutterFlowTheme.of(context)
+                                          style: AppTheme.of(context)
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Manrope',
@@ -447,14 +447,14 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   24.0, 0.0, 4.0, 0.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
+                                            AppLocalizations.of(context).getText(
                                               'a0iimirx' /* Create */,
                                             ),
-                                            style: FlutterFlowTheme.of(context)
+                                            style: AppTheme.of(context)
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Manrope',
-                                                  color: FlutterFlowTheme.of(
+                                                  color: AppTheme.of(
                                                           context)
                                                       .primary,
                                                   letterSpacing: 0.0,
@@ -463,7 +463,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                         ),
                                         Icon(
                                           Icons.arrow_forward_rounded,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: AppTheme.of(context)
                                               .primary,
                                           size: 24.0,
                                         ),

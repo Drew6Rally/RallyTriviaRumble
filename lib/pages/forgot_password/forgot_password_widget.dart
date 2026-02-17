@@ -45,9 +45,9 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      backgroundColor: AppTheme.of(context).primaryBackground,
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: AppTheme.of(context).primaryBackground,
         automaticallyImplyLeading: false,
         leading: InkWell(
           splashColor: Colors.transparent,
@@ -59,15 +59,15 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
           },
           child: Icon(
             Icons.chevron_left_rounded,
-            color: FlutterFlowTheme.of(context).tertiary,
+            color: AppTheme.of(context).tertiary,
             size: 32.0,
           ),
         ),
         title: Text(
-          FFLocalizations.of(context).getText(
+          AppLocalizations.of(context).getText(
             'g416xg9f' /* Forgot Password */,
           ),
-          style: FlutterFlowTheme.of(context).headlineSmall.override(
+          style: AppTheme.of(context).headlineSmall.override(
                 fontFamily: 'Urbanist',
                 letterSpacing: 0.0,
               ),
@@ -97,10 +97,10 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      FFLocalizations.of(context).getText(
+                      AppLocalizations.of(context).getText(
                         'xaiad71o' /* Enter the email associated wit... */,
                       ),
-                      style: FlutterFlowTheme.of(context).bodySmall.override(
+                      style: AppTheme.of(context).bodySmall.override(
                             fontFamily: 'Manrope',
                             letterSpacing: 0.0,
                           ),
@@ -116,17 +116,17 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                 focusNode: _model.emailAddressFocusNode,
                 obscureText: false,
                 decoration: InputDecoration(
-                  labelText: FFLocalizations.of(context).getText(
+                  labelText: AppLocalizations.of(context).getText(
                     'u4nuk910' /* Email Address */,
                   ),
-                  labelStyle: FlutterFlowTheme.of(context).bodySmall.override(
+                  labelStyle: AppTheme.of(context).bodySmall.override(
                         fontFamily: 'Manrope',
                         letterSpacing: 0.0,
                       ),
-                  hintText: FFLocalizations.of(context).getText(
+                  hintText: AppLocalizations.of(context).getText(
                     '37kotxi0' /* Enter your email... */,
                   ),
-                  hintStyle: FlutterFlowTheme.of(context).bodySmall.override(
+                  hintStyle: AppTheme.of(context).bodySmall.override(
                         fontFamily: 'Manrope',
                         letterSpacing: 0.0,
                       ),
@@ -159,11 +159,11 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                   filled: true,
-                  fillColor: FlutterFlowTheme.of(context).secondaryBackground,
+                  fillColor: AppTheme.of(context).secondaryBackground,
                   contentPadding:
                       EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 20.0, 24.0),
                 ),
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                style: AppTheme.of(context).bodyMedium.override(
                       fontFamily: 'Manrope',
                       letterSpacing: 0.0,
                     ),
@@ -173,7 +173,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
             ),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
-              child: FFButtonWidget(
+              child: AppButton(
                 onPressed: () async {
                   if (_model.emailAddressTextController.text.isEmpty) {
                     ScaffoldMessenger.of(context).showSnackBar(
@@ -190,19 +190,19 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                     context: context,
                   );
                 },
-                text: FFLocalizations.of(context).getText(
+                text: AppLocalizations.of(context).getText(
                   'hiwpaze1' /* Send Reset Link */,
                 ),
-                options: FFButtonOptions(
+                options: AppButtonOptions(
                   width: 190.0,
                   height: 50.0,
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   iconPadding:
                       EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                  color: FlutterFlowTheme.of(context).primary,
-                  textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                  color: AppTheme.of(context).primary,
+                  textStyle: AppTheme.of(context).titleSmall.override(
                         fontFamily: 'Manrope',
-                        color: FlutterFlowTheme.of(context).primaryText,
+                        color: AppTheme.of(context).primaryText,
                         letterSpacing: 0.0,
                       ),
                   elevation: 3.0,

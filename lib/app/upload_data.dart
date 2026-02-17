@@ -289,7 +289,7 @@ Future<List<SelectedFile>?> selectFiles({
 }
 
 List<SelectedFile> selectedFilesFromUploadedFiles(
-  List<FFUploadedFile> uploadedFiles, {
+  List<AppUploadedFile> uploadedFiles, {
   String? storageFolderPath,
   bool isMultiData = false,
 }) =>
@@ -364,7 +364,7 @@ void showUploadMessage(
                 child: CircularProgressIndicator(
                   valueColor: Theme.of(context).brightness == Brightness.dark
                       ? AlwaysStoppedAnimation<Color>(
-                          FlutterFlowTheme.of(context).accent4)
+                          AppTheme.of(context).accent4)
                       : null,
                 ),
               ),

@@ -2,8 +2,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 
-class FFButtonOptions {
-  const FFButtonOptions({
+class AppButtonOptions {
+  const AppButtonOptions({
     this.textAlign,
     this.textStyle,
     this.elevation,
@@ -50,8 +50,8 @@ class FFButtonOptions {
   final double? hoverElevation;
 }
 
-class FFButtonWidget extends StatefulWidget {
-  const FFButtonWidget({
+class AppButton extends StatefulWidget {
+  const AppButton({
     super.key,
     required this.text,
     required this.onPressed,
@@ -65,14 +65,14 @@ class FFButtonWidget extends StatefulWidget {
   final Widget? icon;
   final IconData? iconData;
   final Function()? onPressed;
-  final FFButtonOptions options;
+  final AppButtonOptions options;
   final bool showLoadingIndicator;
 
   @override
-  State<FFButtonWidget> createState() => _FFButtonWidgetState();
+  State<AppButton> createState() => _AppButtonState();
 }
 
-class _FFButtonWidgetState extends State<FFButtonWidget> {
+class _AppButtonState extends State<AppButton> {
   bool loading = false;
 
   int get maxLines => widget.options.maxLines ?? 1;

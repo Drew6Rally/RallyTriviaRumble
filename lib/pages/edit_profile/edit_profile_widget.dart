@@ -31,7 +31,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
     _model = createModel(context, () => EditProfileModel());
 
     _model.yourNameTextController ??=
-        TextEditingController(text: FFAppState().currentUserFullName);
+        TextEditingController(text: AppState().currentUserFullName);
     _model.yourNameFocusNode ??= FocusNode();
 
     _model.yourEmailTextController ??= TextEditingController(
@@ -48,13 +48,13 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<AppState>();
 
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+      backgroundColor: AppTheme.of(context).secondaryBackground,
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        backgroundColor: AppTheme.of(context).secondaryBackground,
         automaticallyImplyLeading: false,
         leading: InkWell(
           splashColor: Colors.transparent,
@@ -66,15 +66,15 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
           },
           child: Icon(
             Icons.chevron_left_rounded,
-            color: FlutterFlowTheme.of(context).grayLight,
+            color: AppTheme.of(context).grayLight,
             size: 32.0,
           ),
         ),
         title: Text(
-          FFLocalizations.of(context).getText(
+          AppLocalizations.of(context).getText(
             '4rzqov3y' /* Edit Profile */,
           ),
-          style: FlutterFlowTheme.of(context).headlineSmall.override(
+          style: AppTheme.of(context).headlineSmall.override(
                 fontFamily: 'Urbanist',
                 letterSpacing: 0.0,
               ),
@@ -102,10 +102,10 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                 width: 90.0,
                 height: 90.0,
                 decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                  color: AppTheme.of(context).secondaryBackground,
                   shape: BoxShape.circle,
                   border: Border.all(
-                    color: FlutterFlowTheme.of(context).primaryBackground,
+                    color: AppTheme.of(context).primaryBackground,
                   ),
                 ),
                 child: Container(
@@ -122,7 +122,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
-                child: FFButtonWidget(
+                child: AppButton(
                   onPressed: () async {
                     final selectedMedia =
                         await selectMediaWithSourceBottomSheet(
@@ -134,12 +134,12 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         selectedMedia.every((m) =>
                             validateFileFormat(m.storagePath, context))) {
                       safeSetState(() => _model.isDataUploading = true);
-                      var selectedUploadedFiles = <FFUploadedFile>[];
+                      var selectedUploadedFiles = <AppUploadedFile>[];
 
                       var downloadUrls = <String>[];
                       try {
                         selectedUploadedFiles = selectedMedia
-                            .map((m) => FFUploadedFile(
+                            .map((m) => AppUploadedFile(
                                   name: m.storagePath.split('/').last,
                                   bytes: m.bytes,
                                   height: m.dimensions?.height,
@@ -171,23 +171,23 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
 
                     context.safePop();
                   },
-                  text: FFLocalizations.of(context).getText(
+                  text: AppLocalizations.of(context).getText(
                     'zoxan2gi' /* Change Photo */,
                   ),
-                  options: FFButtonOptions(
+                  options: AppButtonOptions(
                     width: 140.0,
                     height: 40.0,
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     iconPadding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: FlutterFlowTheme.of(context).secondaryBackground,
-                    textStyle: FlutterFlowTheme.of(context).bodySmall.override(
+                    color: AppTheme.of(context).secondaryBackground,
+                    textStyle: AppTheme.of(context).bodySmall.override(
                           fontFamily: 'Manrope',
                           letterSpacing: 0.0,
                         ),
                     elevation: 0.0,
                     borderSide: BorderSide(
-                      color: FlutterFlowTheme.of(context).alternate,
+                      color: AppTheme.of(context).alternate,
                       width: 2.0,
                     ),
                     borderRadius: BorderRadius.circular(8.0),
@@ -201,23 +201,23 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                   focusNode: _model.yourNameFocusNode,
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText: FFLocalizations.of(context).getText(
+                    labelText: AppLocalizations.of(context).getText(
                       '3p9y21e2' /* Your Name */,
                     ),
-                    labelStyle: FlutterFlowTheme.of(context).bodySmall.override(
+                    labelStyle: AppTheme.of(context).bodySmall.override(
                           fontFamily: 'Manrope',
                           letterSpacing: 0.0,
                         ),
-                    hintText: FFLocalizations.of(context).getText(
+                    hintText: AppLocalizations.of(context).getText(
                       'dw9gmjdc' /* Please enter a valid number... */,
                     ),
-                    hintStyle: FlutterFlowTheme.of(context).bodySmall.override(
+                    hintStyle: AppTheme.of(context).bodySmall.override(
                           fontFamily: 'Manrope',
                           letterSpacing: 0.0,
                         ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: FlutterFlowTheme.of(context).alternate,
+                        color: AppTheme.of(context).alternate,
                         width: 2.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),
@@ -244,11 +244,11 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     filled: true,
-                    fillColor: FlutterFlowTheme.of(context).secondaryBackground,
+                    fillColor: AppTheme.of(context).secondaryBackground,
                     contentPadding:
                         EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 20.0, 24.0),
                   ),
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  style: AppTheme.of(context).bodyMedium.override(
                         fontFamily: 'Manrope',
                         letterSpacing: 0.0,
                       ),
@@ -263,23 +263,23 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                   focusNode: _model.yourEmailFocusNode,
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText: FFLocalizations.of(context).getText(
+                    labelText: AppLocalizations.of(context).getText(
                       'z4fstn5l' /* Email Address */,
                     ),
-                    labelStyle: FlutterFlowTheme.of(context).bodySmall.override(
+                    labelStyle: AppTheme.of(context).bodySmall.override(
                           fontFamily: 'Manrope',
                           letterSpacing: 0.0,
                         ),
-                    hintText: FFLocalizations.of(context).getText(
+                    hintText: AppLocalizations.of(context).getText(
                       'jozgvwyg' /* Your email */,
                     ),
-                    hintStyle: FlutterFlowTheme.of(context).bodySmall.override(
+                    hintStyle: AppTheme.of(context).bodySmall.override(
                           fontFamily: 'Manrope',
                           letterSpacing: 0.0,
                         ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: FlutterFlowTheme.of(context).alternate,
+                        color: AppTheme.of(context).alternate,
                         width: 2.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),
@@ -306,11 +306,11 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     filled: true,
-                    fillColor: FlutterFlowTheme.of(context).secondaryBackground,
+                    fillColor: AppTheme.of(context).secondaryBackground,
                     contentPadding:
                         EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 20.0, 24.0),
                   ),
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  style: AppTheme.of(context).bodyMedium.override(
                         fontFamily: 'Manrope',
                         letterSpacing: 0.0,
                       ),
@@ -321,23 +321,23 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
-                child: FFButtonWidget(
+                child: AppButton(
                   onPressed: () {
                     print('Button-Login pressed ...');
                   },
-                  text: FFLocalizations.of(context).getText(
+                  text: AppLocalizations.of(context).getText(
                     'i6edcl52' /* Save Changes */,
                   ),
-                  options: FFButtonOptions(
+                  options: AppButtonOptions(
                     width: 230.0,
                     height: 56.0,
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     iconPadding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: FlutterFlowTheme.of(context).primary,
-                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                    color: AppTheme.of(context).primary,
+                    textStyle: AppTheme.of(context).titleSmall.override(
                           fontFamily: 'Manrope',
-                          color: FlutterFlowTheme.of(context).primaryText,
+                          color: AppTheme.of(context).primaryText,
                           letterSpacing: 0.0,
                         ),
                     elevation: 3.0,

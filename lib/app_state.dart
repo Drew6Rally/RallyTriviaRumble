@@ -7,17 +7,17 @@ import 'backend/supabase/supabase.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'app/app_utils.dart';
 
-class FFAppState extends ChangeNotifier {
-  static FFAppState _instance = FFAppState._internal();
+class AppState extends ChangeNotifier {
+  static AppState _instance = AppState._internal();
 
-  factory FFAppState() {
+  factory AppState() {
     return _instance;
   }
 
-  FFAppState._internal();
+  AppState._internal();
 
   static void reset() {
-    _instance = FFAppState._internal();
+    _instance = AppState._internal();
   }
 
   Future initializePersistedState() async {}

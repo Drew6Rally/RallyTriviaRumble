@@ -88,23 +88,23 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       errorBuilder: (context, state) =>
           appStateNotifier.loggedIn ? NavBarPage() : LoginPageWidget(),
       routes: [
-        FFRoute(
+        AppRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
               appStateNotifier.loggedIn ? NavBarPage() : LoginPageWidget(),
         ),
-        FFRoute(
+        AppRoute(
           name: LoginPageWidget.routeName,
           path: LoginPageWidget.routePath,
           builder: (context, params) => LoginPageWidget(),
         ),
-        FFRoute(
+        AppRoute(
           name: RegisterAccountWidget.routeName,
           path: RegisterAccountWidget.routePath,
           builder: (context, params) => RegisterAccountWidget(),
         ),
-        FFRoute(
+        AppRoute(
           name: CompleteProfileWidget.routeName,
           path: CompleteProfileWidget.routePath,
           builder: (context, params) => CompleteProfileWidget(
@@ -116,12 +116,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        AppRoute(
           name: ForgotPasswordWidget.routeName,
           path: ForgotPasswordWidget.routePath,
           builder: (context, params) => ForgotPasswordWidget(),
         ),
-        FFRoute(
+        AppRoute(
           name: HomeWidget.routeName,
           requireAuth: true,
           path: HomeWidget.routePath,
@@ -132,13 +132,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   page: HomeWidget(),
                 ),
         ),
-        FFRoute(
+        AppRoute(
           name: PreviousQuestionsWidget.routeName,
           requireAuth: true,
           path: PreviousQuestionsWidget.routePath,
           builder: (context, params) => PreviousQuestionsWidget(),
         ),
-        FFRoute(
+        AppRoute(
           name: MYProfilePageWidget.routeName,
           requireAuth: true,
           path: MYProfilePageWidget.routePath,
@@ -149,42 +149,42 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   page: MYProfilePageWidget(),
                 ),
         ),
-        FFRoute(
+        AppRoute(
           name: SubmitAnswerFormWidget.routeName,
           requireAuth: true,
           path: SubmitAnswerFormWidget.routePath,
           builder: (context, params) => SubmitAnswerFormWidget(),
         ),
-        FFRoute(
+        AppRoute(
           name: EditProfileWidget.routeName,
           requireAuth: true,
           path: EditProfileWidget.routePath,
           builder: (context, params) => EditProfileWidget(),
         ),
-        FFRoute(
+        AppRoute(
           name: ChangePasswordWidget.routeName,
           requireAuth: true,
           path: ChangePasswordWidget.routePath,
           builder: (context, params) => ChangePasswordWidget(),
         ),
-        FFRoute(
+        AppRoute(
           name: NotificationsSettingsWidget.routeName,
           requireAuth: true,
           path: NotificationsSettingsWidget.routePath,
           builder: (context, params) => NotificationsSettingsWidget(),
         ),
-        FFRoute(
+        AppRoute(
           name: PrivacyPolicyWidget.routeName,
           path: PrivacyPolicyWidget.routePath,
           builder: (context, params) => PrivacyPolicyWidget(),
         ),
-        FFRoute(
+        AppRoute(
           name: ProfilepageWidget.routeName,
           requireAuth: true,
           path: ProfilepageWidget.routePath,
           builder: (context, params) => ProfilepageWidget(),
         ),
-        FFRoute(
+        AppRoute(
           name: SubmitQuestionFormWidget.routeName,
           requireAuth: true,
           path: SubmitQuestionFormWidget.routePath,
@@ -272,8 +272,8 @@ extension _GoRouterStateExtensions on GoRouterState {
       : TransitionInfo.appDefault();
 }
 
-class FFParameters {
-  FFParameters(this.state, [this.asyncParams = const {}]);
+class AppParameters {
+  AppParameters(this.state, [this.asyncParams = const {}]);
 
   final GoRouterState state;
   final Map<String, Future<dynamic> Function(String)> asyncParams;
@@ -332,8 +332,8 @@ class FFParameters {
   }
 }
 
-class FFRoute {
-  const FFRoute({
+class AppRoute {
+  const AppRoute({
     required this.name,
     required this.path,
     required this.builder,
@@ -346,7 +346,7 @@ class FFRoute {
   final String path;
   final bool requireAuth;
   final Map<String, Future<dynamic> Function(String)> asyncParams;
-  final Widget Function(BuildContext, FFParameters) builder;
+  final Widget Function(BuildContext, AppParameters) builder;
   final List<GoRoute> routes;
 
   GoRoute toRoute(AppStateNotifier appStateNotifier) => GoRoute(
@@ -367,7 +367,7 @@ class FFRoute {
         },
         pageBuilder: (context, state) {
           fixStatusBarOniOS16AndBelow(context);
-          final ffParams = FFParameters(state, asyncParams);
+          final ffParams = AppParameters(state, asyncParams);
           final page = ffParams.hasFutures
               ? FutureBuilder(
                   future: ffParams.completeFutures(),

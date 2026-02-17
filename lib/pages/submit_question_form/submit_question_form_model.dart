@@ -14,7 +14,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class SubmitQuestionFormModel
-    extends FlutterFlowModel<SubmitQuestionFormWidget> {
+    extends AppModel<SubmitQuestionFormWidget> {
   ///  State fields for stateful widgets in this page.
 
   // Model for submitAnswerFormComponent component.

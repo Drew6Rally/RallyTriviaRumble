@@ -9,12 +9,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class EditProfileModel extends FlutterFlowModel<EditProfileWidget> {
+class EditProfileModel extends AppModel<EditProfileWidget> {
   ///  State fields for stateful widgets in this page.
 
   bool isDataUploading = false;
-  FFUploadedFile uploadedLocalFile =
-      FFUploadedFile(bytes: Uint8List.fromList([]));
+  AppUploadedFile uploadedLocalFile =
+      AppUploadedFile(bytes: Uint8List.fromList([]));
   String uploadedFileUrl = '';
 
   // State field(s) for yourName widget.

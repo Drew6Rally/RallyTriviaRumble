@@ -1,2 +1,2 @@
-// Automatic FlutterFlow imports
+// Automatic app imports
 

@@ -263,15 +263,15 @@ extension QueryExtension on Query {
           : where(field, arrayContainsAny: list);
 }
 
-class FFFirestorePage<T> {
+class FirestorePage<T> {
   final List<T> data;
   final Stream<List<T>>? dataStream;
   final QueryDocumentSnapshot? nextPageMarker;
 
-  FFFirestorePage(this.data, this.dataStream, this.nextPageMarker);
+  FirestorePage(this.data, this.dataStream, this.nextPageMarker);
 }
 
-Future<FFFirestorePage<T>> queryCollectionPage<T>(
+Future<FirestorePage<T>> queryCollectionPage<T>(
   Query collection,
   RecordBuilder<T> recordBuilder, {
   Query Function(Query)? queryBuilder,
@@ -305,7 +305,7 @@ Future<FFFirestorePage<T>> queryCollectionPage<T>(
   final data = getDocs(docSnapshot);
   final dataStream = docSnapshotStream?.map(getDocs);
   final nextPageToken = docSnapshot.docs.isEmpty ? null : docSnapshot.docs.last;
-  return FFFirestorePage(data, dataStream, nextPageToken);
+  return FirestorePage(data, dataStream, nextPageToken);
 }
 
 // Creates a Firestore document representing the logged in user if it doesn't yet exist

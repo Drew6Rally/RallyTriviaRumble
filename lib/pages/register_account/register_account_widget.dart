@@ -51,7 +51,7 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      backgroundColor: AppTheme.of(context).primaryBackground,
       body: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -103,10 +103,10 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    FFLocalizations.of(context).getText(
+                                    AppLocalizations.of(context).getText(
                                       'gpokmd81' /* Get Started */,
                                     ),
-                                    style: FlutterFlowTheme.of(context)
+                                    style: AppTheme.of(context)
                                         .displaySmall
                                         .override(
                                           fontFamily: 'Urbanist',
@@ -122,10 +122,10 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Text(
-                                      FFLocalizations.of(context).getText(
+                                      AppLocalizations.of(context).getText(
                                         'oitrrwgg' /* Create your account below. */,
                                       ),
-                                      style: FlutterFlowTheme.of(context)
+                                      style: AppTheme.of(context)
                                           .titleMedium
                                           .override(
                                             fontFamily: 'Manrope',
@@ -144,20 +144,20 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                   obscureText: false,
                                   decoration: InputDecoration(
                                     labelText:
-                                        FFLocalizations.of(context).getText(
+                                        AppLocalizations.of(context).getText(
                                       'gcwdqm4g' /* Email Address */,
                                     ),
-                                    labelStyle: FlutterFlowTheme.of(context)
+                                    labelStyle: AppTheme.of(context)
                                         .bodySmall
                                         .override(
                                           fontFamily: 'Manrope',
                                           letterSpacing: 0.0,
                                         ),
                                     hintText:
-                                        FFLocalizations.of(context).getText(
+                                        AppLocalizations.of(context).getText(
                                       'iam0xgwx' /* Enter your email... */,
                                     ),
-                                    hintStyle: FlutterFlowTheme.of(context)
+                                    hintStyle: AppTheme.of(context)
                                         .bodySmall
                                         .override(
                                           fontFamily: 'Manrope',
@@ -192,13 +192,13 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
-                                    fillColor: FlutterFlowTheme.of(context)
+                                    fillColor: AppTheme.of(context)
                                         .secondaryBackground,
                                     contentPadding:
                                         EdgeInsetsDirectional.fromSTEB(
                                             20.0, 24.0, 20.0, 24.0),
                                   ),
-                                  style: FlutterFlowTheme.of(context)
+                                  style: AppTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Manrope',
@@ -219,20 +219,20 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                   obscureText: !_model.passwordCreateVisibility,
                                   decoration: InputDecoration(
                                     labelText:
-                                        FFLocalizations.of(context).getText(
+                                        AppLocalizations.of(context).getText(
                                       'bqv15dcf' /* Password */,
                                     ),
-                                    labelStyle: FlutterFlowTheme.of(context)
+                                    labelStyle: AppTheme.of(context)
                                         .bodySmall
                                         .override(
                                           fontFamily: 'Manrope',
                                           letterSpacing: 0.0,
                                         ),
                                     hintText:
-                                        FFLocalizations.of(context).getText(
+                                        AppLocalizations.of(context).getText(
                                       'joih97mn' /* Enter your password... */,
                                     ),
-                                    hintStyle: FlutterFlowTheme.of(context)
+                                    hintStyle: AppTheme.of(context)
                                         .bodySmall
                                         .override(
                                           fontFamily: 'Manrope',
@@ -267,7 +267,7 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
-                                    fillColor: FlutterFlowTheme.of(context)
+                                    fillColor: AppTheme.of(context)
                                         .secondaryBackground,
                                     contentPadding:
                                         EdgeInsetsDirectional.fromSTEB(
@@ -282,13 +282,13 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                         _model.passwordCreateVisibility
                                             ? Icons.visibility_outlined
                                             : Icons.visibility_off_outlined,
-                                        color: FlutterFlowTheme.of(context)
+                                        color: AppTheme.of(context)
                                             .secondaryText,
                                         size: 20.0,
                                       ),
                                     ),
                                   ),
-                                  style: FlutterFlowTheme.of(context)
+                                  style: AppTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Manrope',
@@ -310,20 +310,20 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                       !_model.passwordConfirmVisibility,
                                   decoration: InputDecoration(
                                     labelText:
-                                        FFLocalizations.of(context).getText(
+                                        AppLocalizations.of(context).getText(
                                       'rzpiwq9p' /* Confirm Password */,
                                     ),
-                                    labelStyle: FlutterFlowTheme.of(context)
+                                    labelStyle: AppTheme.of(context)
                                         .bodySmall
                                         .override(
                                           fontFamily: 'Manrope',
                                           letterSpacing: 0.0,
                                         ),
                                     hintText:
-                                        FFLocalizations.of(context).getText(
+                                        AppLocalizations.of(context).getText(
                                       'eyfkffka' /* Enter your password... */,
                                     ),
-                                    hintStyle: FlutterFlowTheme.of(context)
+                                    hintStyle: AppTheme.of(context)
                                         .bodySmall
                                         .override(
                                           fontFamily: 'Manrope',
@@ -358,7 +358,7 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
-                                    fillColor: FlutterFlowTheme.of(context)
+                                    fillColor: AppTheme.of(context)
                                         .secondaryBackground,
                                     contentPadding:
                                         EdgeInsetsDirectional.fromSTEB(
@@ -373,13 +373,13 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                         _model.passwordConfirmVisibility
                                             ? Icons.visibility_outlined
                                             : Icons.visibility_off_outlined,
-                                        color: FlutterFlowTheme.of(context)
+                                        color: AppTheme.of(context)
                                             .secondaryText,
                                         size: 20.0,
                                       ),
                                     ),
                                   ),
-                                  style: FlutterFlowTheme.of(context)
+                                  style: AppTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Manrope',
@@ -405,7 +405,7 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                                 0.71,
                                         height: 44.0,
                                         decoration: BoxDecoration(
-                                          color: FlutterFlowTheme.of(context)
+                                          color: AppTheme.of(context)
                                               .secondaryBackground,
                                           borderRadius:
                                               BorderRadius.circular(8.0),
@@ -439,7 +439,7 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                               Icon(
                                                 Icons.arrow_back_rounded,
                                                 color:
-                                                    FlutterFlowTheme.of(context)
+                                                    AppTheme.of(context)
                                                         .primary,
                                                 size: 24.0,
                                               ),
@@ -448,17 +448,17 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                                     .fromSTEB(
                                                         4.0, 0.0, 24.0, 0.0),
                                                 child: Text(
-                                                  FFLocalizations.of(context)
+                                                  AppLocalizations.of(context)
                                                       .getText(
                                                     '3twynvfz' /* Login */,
                                                   ),
-                                                  style: FlutterFlowTheme.of(
+                                                  style: AppTheme.of(
                                                           context)
                                                       .bodyMedium
                                                       .override(
                                                         fontFamily: 'Manrope',
                                                         color:
-                                                            FlutterFlowTheme.of(
+                                                            AppTheme.of(
                                                                     context)
                                                                 .primary,
                                                         letterSpacing: 0.0,
@@ -466,12 +466,12 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                                 ),
                                               ),
                                               Text(
-                                                FFLocalizations.of(context)
+                                                AppLocalizations.of(context)
                                                     .getText(
                                                   '9ssznj0g' /* Already have an account? */,
                                                 ),
                                                 style:
-                                                    FlutterFlowTheme.of(context)
+                                                    AppTheme.of(context)
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily: 'Manrope',
@@ -489,7 +489,7 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 24.0, 0.0, 24.0),
-                                child: FFButtonWidget(
+                                child: AppButton(
                                   onPressed: () async {
                                     GoRouter.of(context).prepareAuthEvent();
                                     if (_model.passwordCreateTextController
@@ -521,18 +521,18 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                         CompleteProfileWidget.routeName,
                                         context.mounted);
                                   },
-                                  text: FFLocalizations.of(context).getText(
+                                  text: AppLocalizations.of(context).getText(
                                     '5kmjfwsk' /* Create Account */,
                                   ),
-                                  options: FFButtonOptions(
+                                  options: AppButtonOptions(
                                     width: 160.0,
                                     height: 50.0,
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: FlutterFlowTheme.of(context).primary,
-                                    textStyle: FlutterFlowTheme.of(context)
+                                    color: AppTheme.of(context).primary,
+                                    textStyle: AppTheme.of(context)
                                         .titleSmall
                                         .override(
                                           fontFamily: 'Manrope',

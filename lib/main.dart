@@ -27,9 +27,9 @@ void main() async {
 
   await SupaFlow.initialize();
 
-  await FlutterFlowTheme.initialize();
+  await AppTheme.initialize();
 
-  final appState = FFAppState(); // Initialize FFAppState
+  final appState = AppState(); // Initialize AppState
   await appState.initializePersistedState();
 
   runApp(ChangeNotifierProvider(
@@ -50,7 +50,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   Locale? _locale;
 
-  ThemeMode _themeMode = FlutterFlowTheme.themeMode;
+  ThemeMode _themeMode = AppTheme.themeMode;
 
   late AppStateNotifier _appStateNotifier;
   late GoRouter _router;
@@ -102,7 +102,7 @@ class _MyAppState extends State<MyApp> {
 
   void setThemeMode(ThemeMode mode) => safeSetState(() {
         _themeMode = mode;
-        FlutterFlowTheme.saveThemeMode(mode);
+        AppTheme.saveThemeMode(mode);
       });
 
   @override
@@ -111,7 +111,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Rally Trivia Rumble',
       localizationsDelegates: [
-        FFLocalizationsDelegate(),
+        AppLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
@@ -177,9 +177,9 @@ class _NavBarPageState extends State<NavBarPage> {
           _currentPage = null;
           _currentPageName = tabs.keys.toList()[i];
         }),
-        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
-        selectedItemColor: FlutterFlowTheme.of(context).primary,
-        unselectedItemColor: FlutterFlowTheme.of(context).secondaryText,
+        backgroundColor: AppTheme.of(context).secondaryBackground,
+        selectedItemColor: AppTheme.of(context).primary,
+        unselectedItemColor: AppTheme.of(context).secondaryText,
         showSelectedLabels: true,
         showUnselectedLabels: false,
         type: BottomNavigationBarType.fixed,
@@ -189,7 +189,7 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.home_sharp,
               size: 24.0,
             ),
-            label: FFLocalizations.of(context).getText(
+            label: AppLocalizations.of(context).getText(
               'm8rhanhc' /* Home */,
             ),
             tooltip: '',
@@ -203,7 +203,7 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.account_circle_rounded,
               size: 24.0,
             ),
-            label: FFLocalizations.of(context).getText(
+            label: AppLocalizations.of(context).getText(
               '8srr2k0j' /* Account */,
             ),
             tooltip: '',

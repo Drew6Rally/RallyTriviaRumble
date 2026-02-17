@@ -40,9 +40,9 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      backgroundColor: AppTheme.of(context).primaryBackground,
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: AppTheme.of(context).primaryBackground,
         automaticallyImplyLeading: false,
         leading: InkWell(
           splashColor: Colors.transparent,
@@ -54,15 +54,15 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
           },
           child: Icon(
             Icons.chevron_left_rounded,
-            color: FlutterFlowTheme.of(context).grayLight,
+            color: AppTheme.of(context).grayLight,
             size: 32.0,
           ),
         ),
         title: Text(
-          FFLocalizations.of(context).getText(
+          AppLocalizations.of(context).getText(
             'alczfiiy' /* Privacy Policy */,
           ),
-          style: FlutterFlowTheme.of(context).headlineSmall.override(
+          style: AppTheme.of(context).headlineSmall.override(
                 fontFamily: 'Urbanist',
                 letterSpacing: 0.0,
               ),
@@ -81,10 +81,10 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
               children: [
                 Expanded(
                   child: Text(
-                    FFLocalizations.of(context).getText(
+                    AppLocalizations.of(context).getText(
                       'fvsfg5on' /* How we use your data */,
                     ),
-                    style: FlutterFlowTheme.of(context).displaySmall.override(
+                    style: AppTheme.of(context).displaySmall.override(
                           fontFamily: 'Urbanist',
                           letterSpacing: 0.0,
                         ),
@@ -100,10 +100,10 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
               children: [
                 Expanded(
                   child: Text(
-                    FFLocalizations.of(context).getText(
+                    AppLocalizations.of(context).getText(
                       'nbiyrnzl' /* Lorem ipsum dolor sit amet, co... */,
                     ),
-                    style: FlutterFlowTheme.of(context).bodySmall.override(
+                    style: AppTheme.of(context).bodySmall.override(
                           fontFamily: 'Manrope',
                           letterSpacing: 0.0,
                         ),
